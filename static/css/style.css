@@ -237,6 +237,7 @@ div#preloader {
 .section-headline h3 {
     font-size: 40px;
     line-height: 46px;
+
 }
 .section-headline p {
     font-size: 16px;
@@ -313,6 +314,7 @@ div#preloader {
 }
 .header-area{
 	background:transparent;
+    background-color:white;
 }
 .logo {
     display: block;
@@ -333,7 +335,7 @@ div#preloader {
 }
 .main-menu ul.navbar-nav li a {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    color: #fff;
+    color: black;
     font-size: 16px;
     font-weight: 700;
     padding: 33px 15px;
@@ -1688,21 +1690,22 @@ span.users {
     position: relative;
 }
 .page-area {
-    background: url(/static/img/background/b.jpg);
+    /*background: url(/static/img/background/b.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
 }
 .breadcumb-overlay {
   position: absolute;
-  background: rgba(10, 24, 40, 0.8) none repeat scroll 0 0;
+  /*background: rgba(10, 24, 40, 0.8) none repeat scroll 0 0;*/
+  background-color:#2980B9;
   top: 0;
   width: 100%;
   left: 0;
   height: 100%;
 }
 .breadcrumb {
-    padding: 190px 0px 60px;
+    padding: 87px 0px 20px;
     background-color: transparent;
     margin-bottom: 0;
 }
@@ -1723,10 +1726,10 @@ span.users {
     position: relative;
     top: 15px;
     font-weight: 700;
-    padding: 40px 0px;
+    padding: 40px 0px 0px 0px;
 }
 .breadcrumb .section-headline{
-    padding-bottom: 0px;
+    padding-bottom: 25px;
 }
 .breadcrumb .section-headline h3::after {
     display: none;
