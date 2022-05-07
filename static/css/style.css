@@ -39,7 +39,7 @@
     21. Blog Sidebar Area
     22. Blog Details
     23.Contact CSS
-    24.	Animation  CSS
+    24.	Animation  CSSform-control
 
 
 
@@ -86,7 +86,7 @@ img {max-width:100%;
 	overflow:hidden;
 }
 p {
-	margin:0 0 15px;
+	margin:0 0 9px;
     color: #5d6471;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -219,7 +219,7 @@ div#preloader {
 	padding: 100px 0px 70px;
 }
 .page-padding {
-    padding: 130px 0px 100px;
+    padding: 0px 0px 40px;
 }
 .page-padding-2{
     padding: 130px 0px 70px;
@@ -336,14 +336,14 @@ div#preloader {
 .main-menu ul.navbar-nav li a {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    padding: 33px 15px;
+    padding: 38px 15px;
     text-transform: uppercase;
     position: relative;
 }
 .main-menu ul.navbar-nav li a:hover{
-	color: #E6922E;
+	color: #2980B9;
 }
 .main-menu ul.navbar-nav li.active a:focus {
     color: #fff;
@@ -390,7 +390,7 @@ div#preloader {
     position: relative;
 }
 .navbar.navbar-default {
-    float: right;
+    float: left;
 }
 .main-menu ul.nav li ul.sub-menu li {
     padding: 0;
@@ -1702,7 +1702,7 @@ span.users {
   top: 0;
   width: 100%;
   left: 0;
-  height: 100%;
+  height: 92%;
 }
 .breadcrumb {
     padding: 87px 0px 20px;
@@ -2021,10 +2021,16 @@ span.users {
 /*----------------------------------------
 20. Login And Register page
 ----------------------------------------*/
+.idpwtitle{
+    font-size: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
 .login-page {
     display: block;
     overflow: hidden;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -2058,10 +2064,10 @@ span.users {
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    background-color: #fff;
+    background-color: #F1F1F1;
     background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 0px;
+    border: 1px solid #F1F1F1;
+    border-radius: 6px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
@@ -2077,8 +2083,8 @@ span.users {
 }
 .login-btn {
     padding: 10px 30px;
-    border: 1px solid #E6922E;
-    background: #E6922E;
+    border: 1px solid #2980B9;
+    background: #2980B9;
     color: #fff;
     transition: 0.4s;
     font-size: 15px;
@@ -2087,11 +2093,23 @@ span.users {
     text-transform: uppercase;
     display: block;
     width: 100%;
+    margin-top: 15px;
 }
 .login-btn:hover{
-    border: 1px solid #E6922E;
+    border: 1px solid #2980B9;
     background: transparent;
-    color: #E6922E;
+    color: #2980B9;
+    transition: 0.4s;
+}
+.signup{
+    border: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    color: #5d6471;
+}
+.signup:hover{
+    border: 1px solid #5d6471;
+    background: transparent;
+    color: #5d6471;
     transition: 0.4s;
 }
 .flex-box{
@@ -2102,7 +2120,6 @@ span.users {
 }
 .check-group {
     position: relative;
-    margin: 0px 0px 20px;
 }
 .check-box{
     color: #151b2c;
