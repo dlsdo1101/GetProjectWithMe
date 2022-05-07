@@ -556,9 +556,9 @@ div#preloader {
 /*  3. Intro Area
 /*----------------------------------------*/
 .slide-area {
-    background: rgba(0, 0, 0, 0) url(/static/img/slider/h1.jpg) no-repeat scroll top center / cover;
+    background: rgba(0, 0, 0, 0) url(/static/img/slider/main2.jpg) no-repeat scroll top center / cover;
     width: 100%;
-    height: 100%;
+    height: 80%;
     z-index: 1;
     position: relative;
 }
@@ -568,7 +568,7 @@ div#preloader {
     top: 0;
     height: 100%;
     width: 100%;
-    background: rgba(10, 24, 40, 0.8) none repeat scroll 0 0;
+    background: rgba(10, 24, 25, 0.65) none repeat scroll 0 0;
     content: "";
     z-index: -1;
 }
@@ -586,6 +586,10 @@ div#preloader {
 .slide-content {
     margin-top: 60px;
 }
+.whitetxt{
+    color: #fff;
+    letter-spacing: 3px;
+}
 .title2 {
     font-size: 90px;
     line-height: 92px;
@@ -594,6 +598,9 @@ div#preloader {
     padding-bottom: 20px;
     max-width: 900px;
     font-weight: 700;
+}
+.procolor{
+    color: #2980B9;
 }
 .ready-btn {
     border: 1px solid #E6922E;
