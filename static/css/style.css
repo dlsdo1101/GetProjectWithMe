@@ -603,20 +603,20 @@ div#preloader {
     color: #2980B9;
 }
 .ready-btn {
-    border: 1px solid #E6922E;
-    color: #fff;
+    border: 2px solid #B9B9B9;
+    color: #B9B9B9;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
     margin-top: 20px;
-    padding: 12px 10px;
+    padding: 8px 0px;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.4s ease 0s;
     z-index: 2;
-    background: #E6922E;
-    width: 160px;
+    background: #fff;
+    width: 266px;
     border-radius: 2px;
 }
 .ready-btn.right-btn {
@@ -633,8 +633,8 @@ div#preloader {
 }
 .ready-btn.left-btn:hover {
     background: #fff;
-    border: 1px solid #fff;
-    color: #E6922E;
+    border: 2px solid #5d6471;
+    color: #5d6471;
     transition: 0.4s;
 }
 .slide-area .video-content {
@@ -705,8 +705,11 @@ div#preloader {
 }
 .fun_text {
     text-align: center;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    padding: 40px 30px;
+    border-right: 2px #E0E0E0 solid;
+    /*border-left: 2px #D1D1D1 solid;*/
+    /*box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);*/
+    width:100%;
+    padding: 40px 0px;
     position: relative;
     margin-bottom: 30px;
 }
@@ -717,14 +720,14 @@ div#preloader {
     bottom: 0px;
     width: 100%;
     height: 1px;
-    background: #E6922E;
+    /*background: #E6922E;*/
 }
 .fun_text .counter {
-    color: #444;
+    color: #D1D1D1;
     display: block;
     font-size: 20px;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .fun_text h4 {
     margin-bottom: 0px;
@@ -736,6 +739,36 @@ div#preloader {
     text-transform: uppercase;
     margin-bottom: 0;
     line-height: 20px;
+}
+.mainimg{
+    width:62%;
+    border: 2px solid #D1D1D1;
+    border-radius: 50%;
+}
+.colorblue{
+    color: #2980B9;
+    margin: 20px 0;
+}
+.righthid{
+    border:0px;
+}
+.midsize{
+    font-size: 13px;
+}
+.midleft{
+    letter-spacing: 3px;
+    text-align: left;
+}
+.halfline{
+    background: linear-gradient(to top, #D0E7F7 50%, transparent 30%);
+    width: fit-content;
+}
+.textleftalign{
+    text-align: left;
+    font-weight: bold;
+}
+.midheight{
+    height: 445px;
 }
 /*----------------------------------------*/
 /*  5. Invest Area
