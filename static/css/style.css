@@ -177,7 +177,7 @@ ul{
 }
 input, select, textarea, input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], button, button[type="submit"] {
 	-moz-appearance: none;
-	box-shadow: none !important;
+	box-shadow: none;
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
@@ -200,8 +200,9 @@ div#preloader {
     text-shadow: none;
 }
 ::selection {
-    background: #E6922E;
+    background: #5E5E5E;
     text-shadow: none;
+    color: #fff;
 }
 .bg-color{
     background:#fafafa;
@@ -338,7 +339,7 @@ div#preloader {
     color: black;
     font-size: 18px;
     font-weight: 700;
-    padding: 38px 15px;
+    padding: 38px 15px 25px 15px;
     text-transform: uppercase;
     position: relative;
 }
@@ -381,7 +382,7 @@ div#preloader {
     transition: all 0.3s ease 0s;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     visibility: hidden;
-    width: 200px;
+    width: 120px;
     z-index: -99;
 	padding: 10px 0px;
     border-radius: 3px;
@@ -413,7 +414,7 @@ div#preloader {
     color: #E6922E;
 }
 .main-menu ul.nav li:hover ul.sub-menu li a:hover{
-    color:#E6922E;
+    color:#2980B9;
 }
 .header-right-link {
     float: right;
@@ -769,6 +770,13 @@ div#preloader {
 }
 .midheight{
     height: 445px;
+}
+.arrow{
+    font-weight:bold;
+    font-size:15px;
+}
+.rightarrow{
+    width:15px;
 }
 /*----------------------------------------*/
 /*  5. Invest Area
@@ -2245,6 +2253,70 @@ span.users {
     height: 100%;
     max-height: 588px;
     object-fit: cover;
+}
+.signup-page{
+    width:65%;
+}
+.lefttxt{
+    line-height: 35px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 900;
+    font-size: large;
+}
+.login-form .signup-input {
+    display: block;
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    min-height: 36px;
+    margin-bottom: 30px;
+}
+.same-check {
+    border: 1px solid #5E5E5E;
+    background: #5E5E5E;
+    color: #fff;
+    transition: 0.4s;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 7px;
+    text-transform: uppercase;
+    display: block;
+    width: 80%;
+    height: 35px;
+    margin: 0px 12px;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+}
+.shadow{
+    box-shadow: 1px 1px 3px 1px #dadce0;
+}
+.signuphr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1.5px solid #888888;
+    width: 95%;
+}
+#career{
+    height: 120px;
+}
+.birthinput{
+    margin-right: 10px;
+}
+#schoolregister{
+    margin-left: 10px;
 }
 /*----------------------------------------*/
 /*  21. Blog Sidebar Area

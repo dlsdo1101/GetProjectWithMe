@@ -46,33 +46,6 @@
         <div id="preloader"></div>
         <header class="header-one">
             <!-- Start top bar -->
-            <div class="topbar-area fix hidden-xs">
-                <div class="container">
-                    <div class="row">
-                       <div class="col-md-6 col-sm-6">
-                           <div class="topbar-left">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> info@aievari4.com</a></li>
-                                    <li><a href="#"><i class="fa fa-phone"></i> +909-654-9805</a></li>
-                                </ul>
-							</div>
-                        </div>
-                        <div class=" col-md-6 col-sm-6">
-                            <div class="topbar-right">
-                                <div class="top-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- End top bar -->
             <!-- header-area start -->
             <div id="sticker" class="header-area hidden-xs">
@@ -81,19 +54,19 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="row">
                                 <!-- logo start -->
-                                <div class="col-md-3 col-sm-3">
+                                <div class="col-md-2 col-sm-3">
                                     <div class="logo">
                                         <!-- Brand -->
                                         <a class="navbar-brand page-scroll white-logo" href="index-2.html">
-                                            <img src="/static/img/logo/logo3.png" alt="">
+                                            <img src="/static/img/logo/GPWM_logo.png" alt="">
                                         </a>
                                         <a class="navbar-brand page-scroll black-logo" href="index-2.html">
-                                            <img src="/static/img/logo/logo.png" alt="">
+                                            <img src="/static/img/logo/GPWM_logo.png" alt="">
                                         </a>
                                     </div>
                                     <!-- logo end -->
                                 </div>
-                                <div class="col-md-9 col-sm-9">
+                                <div class="col-md-10 col-sm-9">
                                     <div class="header-right-link">
                                         <!-- search option end -->
                                         <a class="s-menu" href="login.html">Login</a>
@@ -103,13 +76,13 @@
                                         <div class="collapse navbar-collapse" id="navbar-example">
                                             <div class="main-menu">
                                                 <ul class="nav navbar-nav navbar-right">
-                                                    <li><a class="pages" href="index-2.html">Home</a>
+                                                    <li><a class="pages" href="index-2.html">소개</a>
                                                         <ul class="sub-menu">
                                                             <li><a href="index-2.html">Home 01</a></li>
                                                             <li><a href="index-3.html">Home 02</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="about.html">About us</a></li>
+                                                    <li><a href="about.html">참여하기</a></li>
                                                     <li><a href="investment.html">Investment</a></li>
                                                     <li><a class="pages" href="#">Pages</a>
                                                         <ul class="sub-menu">
@@ -194,12 +167,9 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline">
-                                <h3>Register</h3>
+                                <h3>회원가입</h3>
+                                <hr>
                             </div>
-                            <ul class="breadcrumb-bg">
-                                <li class="home-bread">Home</li>
-                                <li>Register</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -213,28 +183,92 @@
                     <div class=" col-md-12 col-sm-12 col-xs-12">
                         <div class="login-page signup-page">
                             <div class="login-form signup-form">
-                                <h4 class="login-title ">REGISTER</h4>
                                 <div class="row">
                                     <form id="contactForm" method="POST" action="http://rockstheme.com/rocks/aievari-live/contact.php" class="log-form">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="text" id="name" class="form-control" placeholder="Username" required data-error="Please enter your name">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="email" id="email" class="form-control" placeholder="Your Email" required data-error="Please enter your name">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="password" id="msg_subject" class="form-control" placeholder="Password" required data-error="Please enter your message subject">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12 ">
-                                            <div class="check-group flexbox">
-                                                <label class="check-box">
-                                                    <input type="checkbox" class="check-box-input" checked>
-                                                    <span class="remember-text">I agree terms & conditions</span>
-                                                </label>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">아이디</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="text" id="id" class="signup-input midinput" required data-error="Please enter your name">
+                                            </div>
+                                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                                <button id="check" class="same-check shadow">중복확인</button>
                                             </div>
                                         </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">비밀번호</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="text" id="password" class="signup-input" required data-error="Please enter your name">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">비밀번호 확인</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="text" id="passwordcheck" class="signup-input" required data-error="Please enter your name">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">이름</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="text" id="name" class="signup-input" required data-error="Please enter your name">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">이메일</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="email" id="email" class="signup-input" required data-error="Please enter your name">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">휴대전화</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="text" id="phone" class="signup-input" required data-error="Please enter your name">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">생년월일</div>
+                                            <div class="col-md-2 col-sm-12 col-xs-12 birthinput">
+                                                <input type="number" class="signup-input" name="year" min="1900" max="2022" placeholder="년">
+                                            </div>
+                                            <div class="col-md-2 col-sm-12 col-xs-12 birthinput">
+                                                <input type="number" class="signup-input" name="month" min="1" max="12" placeholder="월">
+                                            </div>
+                                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                                <input type="number" class="signup-input" name="day" min="1" max="31" placeholder="일">
+                                            </div>
+                                        </div>
+                                        <hr class="signuphr">
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">학력정보</div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12">
+                                                <input type="text" id="school" class="signup-input midinput" placeholder="학교명" required data-error="Please enter your name">
+                                            </div>
+                                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                                <button id="schoolfind" class="same-check shadow">학교찾기</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt"> </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <input type="text" id="major" class="signup-input midinput" placeholder="학과명" required data-error="Please enter your name">
+                                            </div>
+                                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                                <select id="schoolregister" class="signup-input midinput">
+                                                    <option value="1" selected>재학</option>
+                                                    <option value="2">휴학</option>
+                                                    <option value="3">졸업</option>
+                                                    <option value="4">직장인</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt"> </div>
+                                            <div class="col-md-9 col-sm-12 col-xs-12">
+                                                <textarea type="text" id="career" class="signup-input " placeholder="사용가능 언어, 프로젝트 이력을 쓰시오." required data-error="Please enter your name"></textarea>
+                                            </div>
+                                        </div>
+                                        
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <button type="submit" id="submit" class="login-btn">Sign up</button>
+                                            <button type="submit" id="submit" class="login-btn">가입하기</button>
                                             <div id="msgSubmit" class="h3 hidden"></div> 
                                             <div class="clearfix"></div>
                                         </div>
