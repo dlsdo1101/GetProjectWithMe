@@ -345,6 +345,7 @@ div#preloader {
 }
 .main-menu ul.navbar-nav li a:hover{
 	color: #2980B9;
+    font-size:22px;
 }
 .main-menu ul.navbar-nav li.active a:focus {
     color: #fff;
@@ -418,7 +419,7 @@ div#preloader {
 }
 .header-right-link {
     float: right;
-    width: 115px;
+    /*width: 115px;*/
     padding: 30px 0px;
     margin-left: 60px;
     text-align: right;
@@ -436,9 +437,9 @@ div#preloader {
 }
 .s-menu {
     padding: 10px 25px;
-    border: 1px solid #E6922E;
-    background: #E6922E;
-    color: #fff;
+    border: 1px solid #E0E0E0;
+    background: #E0E0E0;
+    color: #404040;
     transition: 0.4s;
     font-size: 15px;
     font-weight: 700;
@@ -448,7 +449,7 @@ div#preloader {
 .s-menu:hover {
     border: 1px solid #fff;
     background: #fff;
-	color:#E6922E;
+	color:#404040;
     transition: 0.4s;
 }
 .header-area.stick  .header-right-link {
@@ -456,6 +457,9 @@ div#preloader {
 }
 .logo a.black-logo {
     display: none;
+}
+.usericon{
+    font-size: 40px;
 }
 /*--------------------------------*/
 /* 2.2. Sticky Header Area
@@ -478,6 +482,9 @@ div#preloader {
     padding: 32px 15px;
     color: #151b2c;
 }
+.header-area.stick .main-menu ul.navbar-nav li a:hover{
+    color: #2980B9;
+}
 .header-area.stick .main-menu ul.nav li ul.sub-menu li a {
     color: #151b2c;
     display: block;
@@ -493,15 +500,15 @@ div#preloader {
     display: block;
 }
 .header-area.stick .s-menu {
-    border: 1px solid #E6922E;
-    background: #E6922E;
-    color: #fff;
+    border: 1px solid #E0E0E0;
+    background: #E0E0E0;
+    color: #404040;
     transition: 0.4s;
 }
 .header-area.stick .s-menu:hover{
-    border: 1px solid #E6922E;
+    border: 1px solid #fff;
     background: #fff;
-    color: #E6922E;
+    color: #404040;
     transition: 0.4s;
 }
 /*----------------------------------------*/
@@ -2408,7 +2415,144 @@ span.users {
   .tabmenu{
     padding:40px 0;
   }
+  .intro-page{
+    display: block;
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .solve{
+    text-align: left;
+    /*background-color: #FAFAFA;*/
+    /*padding: 25px;*/
+    height: 270px;
+  }
+  .balloon-left{
+  position: relative;
+  display: inline-block;
+  margin: 1em 0 0.5em 15px;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #EDEDED;
+  border: solid 3px #EDEDED;
+  box-sizing: border-box;
+}
 
+.balloon-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #EDEDED;
+  z-index: 2;
+}
+
+.balloon-left:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #EDEDED;
+  z-index: 1;
+}
+
+.balloon-left p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.introrb{
+    margin-top:10px;
+}
+.intro_bot_font{
+    font-size:16px;
+}
+.bcolor{
+    color: #3498DB;
+}
+.font-var{
+    font-weight:800;
+}
+.prointro{
+    text-align: left;
+    /*background-color: #FAFAFA;*/
+    /*padding: 25px;*/
+    height: 270px;
+    margin-top: 63px;
+}
+.leftfontw{
+    font-weight: 400;
+}
+.leftfontw2{
+    font-weight: 300;
+}
+.rightimg{
+    width: 88%;
+    margin-top: 20px;
+    margin-left: 29px;
+}
+.backcolorgray{
+    background-color: #E0E0E0;
+    height: 100%;
+}
+.font-back{
+    background-color: #91D3FF;
+    border: 1px solid #91D3ff;
+    border-radius: 28%;
+    width: fit-content;
+    padding: 5px 40px;
+    margin-bottom: 30px;
+}
+.bottomleft{
+    margin-top: 35px;
+}
+.leftfontp{
+    margin:0;
+}
+.bottomrightimg{
+    margin-left: 20px;
+    width: 76%;
+}
+.nonpad{
+    padding:0px;
+}
+.nonmar{
+    margin: 15px 0 0 0;
+}
+.h6size{
+    font-size:14px;
+    font-weight: 500;
+}
+.blueimgmar{
+    margin-top: 15px;
+}
+.usericon{
+    margin-right: 20px;
+    font-size: 34px;
+}
+.usericonflex{
+    display: flex;
+}
+.loginm{
+    margin-top: 6px;
+}
+.iconcolor{
+    color: #595959;
+}
+.iconcolor:hover{
+    color: #2980B9;
+    font-size: 36px;
+}
 /*----------------------------------------*/
 /*  21. Blog Sidebar Area
 /*----------------------------------------*/
