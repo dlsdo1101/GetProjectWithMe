@@ -2318,6 +2318,97 @@ span.users {
 #schoolregister{
     margin-left: 10px;
 }
+.my-page{
+    display: block;
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 3px;
+}
+.profile{
+    text-align: left;
+    background-color: #FAFAFA;
+    padding: 25px;
+    height: 270px;
+}
+.proright{
+    margin-left: 46px;
+}
+.proedit{
+    border: 1px solid #5E5E5E;
+    background: #5E5E5E;
+    color: #fff;
+    transition: 0.4s;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 7px;
+    text-transform: uppercase;
+    display: block;
+    width: 24%;
+    height: 30px;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    margin-top: 15px;
+}
+.prorightmid{
+    color: #5E5E5E;
+    margin-bottom: 5px;
+}
+.proimg{
+    height: 220px;
+}
+.tabbox {
+    font-size: 0px;
+  }
+  .tabbox input[type='radio'] {
+    display: none;
+  }
+  .tabbox label {
+    display: inline-block;
+    width: 25%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #9C9C9C;
+    background-color: #f1f1f1;
+  }
+  .tabbox input:checked + label {
+    background: #fff;
+  }
+  .tabbox .tab-content {
+    display: none;
+    width: 500px;
+    height: 100px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #tab1:checked ~ #tab-content1 {
+    display: block;
+    background-color: #f2d0d0;
+  }
+
+  #tab2:checked ~ #tab-content2 {
+    display: block;
+    background-color: #e8f5d2;
+  }
+  #tab3:checked ~ #tab-content3 {
+    display: block;
+    background-color: #000;
+  }
+  #tab4:checked ~ #tab-content4 {
+    display: block;
+    background-color: #00ACED;
+  }
+  .tabmenu{
+    padding:40px 0;
+  }
+
 /*----------------------------------------*/
 /*  21. Blog Sidebar Area
 /*----------------------------------------*/
