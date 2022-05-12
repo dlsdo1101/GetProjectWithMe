@@ -869,38 +869,38 @@ span.users {
 .support-services {
     background: #fff;
     position: relative;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 25px #e0e0e0;
     z-index: 1;
-    padding: 40px;
+    padding: 20px 30px 15px 30px;
     overflow: hidden;
     border-radius: 3px;
-    transition: 0.4s;
+    /*transition: 0.2s;*/
     z-index: 1;
     margin-bottom: 30px;
-    border:1px solid #E6922E;
+    /*border:1px solid #E6922E;*/
 }
-.support-services::after {
+/*.support-services::after {
     position: absolute;
     content: "";
     left: 0px;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(233,146,46,0.96);
+    background: rgba(131,131,131,0.5);
     transition: 0.4s;
     opacity: 0;
     z-index: -1;
-}
+}*/
 .support-images {
     float: left;
     font-size: 44px;
-    color: #E6922E;
+    color: #595959;
     line-height: 70px;
-    width: 70px;
-    height: 70px;
-    border: 1px solid #E6922E;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #595959;
     text-align: center;
-    margin-right: 30px;
+    /*margin-right: 30px;*/
     border-radius: 50%;
 }
 .support-content {
@@ -918,13 +918,58 @@ span.users {
     transition: 0.4s;
     opacity: 1;
 }
-.support-services:hover .support-images {
+/*.support-services:hover .support-images {
     transition: 0.4s;
     color: #fff;
      border: 1px solid #fff;
+}*/
+/*.support-services:hover .cateicon {
+    transition: 0.4s;
+    color: #fff;
+}
+.support-services:hover .cardbt {
+    transition: 0.4s;
+    color: #fff;
+}
+.support-services:hover .catename {
+    transition: 0.4s;
+    background-color: #838383;
+    border: 1px solid #838383;
+    color: #E6E6E6;
+}
+.support-services:hover .recruit {
+    transition: 0.4s;
+    background-color: #fff;
+    width: 26%;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(233,146,46,0.96);
+    margin: 10px 0 20px 5px;
+}*/
+.support-services{
+    box-shadow:3px 3px 3px #e0e0e0;
+    /*transition-duration: 0.3s;*/
+}
+.support-services:active{
+    margin-left:2px;
+    margin-top:2px;
+    /*box-shadow:none;*/
+}
+.support-services:hover{
+    /*margin-left:3px;
+    margin-top:3px;*/
+    /*box-shadow:none;*/
+    cursor: pointer;
 }
 .support-services:hover .support-content h4, .support-services:hover .support-content p {
     color: #fff;
+}
+.support-all{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 /*----------------------------------------
  7.Self Area Css
@@ -2552,6 +2597,82 @@ span.users {
 .iconcolor:hover{
     color: #2980B9;
     font-size: 36px;
+}
+.cate{
+    border-top: 5px solid #000;
+    margin: 0 5px;
+}
+.catecenter{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.catecenter2{
+    display: flex;
+    justify-content: center;
+}
+.h6mar{
+    margin:0 8px;
+    border-bottom: 5px solid #fff;
+}
+.backcolorwhite{
+    background-color: #fff;
+    height: 100%;
+}
+.joinstart{
+    background-color: #f0f0f0;
+    padding-top: 30px;
+}
+.h6mar:hover{
+    color: #2980B9;
+    border-bottom: 5px solid #2980B9;
+}
+.cardmar{
+    margin:0 4%;
+}
+.catename{
+    background-color: #E6E6E6;
+    width:20%;
+    border: 1px solid #E6E6E6;
+    border-radius: 20px;
+    text-align: center;
+    color: #838383;
+    margin: 10px 0 0 5px;
+}
+.recruit{
+    background-color: rgba(233,146,46,0.96);
+    width:26%;
+    border: 1px solid rgba(233,146,46,0.96);
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 10px 0 20px 5px;
+}
+.num{
+    text-align: right;
+}
+.cateicon{
+    float: left;
+    font-size: 53px;
+    color: #595959;
+    line-height: 55px;
+    width: 90px;
+    height: 90px;
+    /*border: 1px solid #E6922E;*/
+    text-align: center;
+    /* margin-right: 30px; */
+    border-radius: 50%;
+    margin-top: 17px;
+}
+.conwidth{
+    width:60%;
+}
+.wow{
+    width: 446px;
+}
+.cardbt{
+    margin:0;
 }
 /*----------------------------------------*/
 /*  21. Blog Sidebar Area
