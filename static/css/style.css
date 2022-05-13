@@ -877,20 +877,8 @@ span.users {
     /*transition: 0.2s;*/
     z-index: 1;
     margin-bottom: 30px;
-    /*border:1px solid #E6922E;*/
+    border:6px solid #fff;
 }
-/*.support-services::after {
-    position: absolute;
-    content: "";
-    left: 0px;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(131,131,131,0.5);
-    transition: 0.4s;
-    opacity: 0;
-    z-index: -1;
-}*/
 .support-images {
     float: left;
     font-size: 44px;
@@ -900,7 +888,6 @@ span.users {
     height: 90px;
     border: 1px solid #595959;
     text-align: center;
-    /*margin-right: 30px;*/
     border-radius: 50%;
 }
 .support-content {
@@ -918,56 +905,21 @@ span.users {
     transition: 0.4s;
     opacity: 1;
 }
-/*.support-services:hover .support-images {
-    transition: 0.4s;
-    color: #fff;
-     border: 1px solid #fff;
-}*/
-/*.support-services:hover .cateicon {
-    transition: 0.4s;
-    color: #fff;
-}
-.support-services:hover .cardbt {
-    transition: 0.4s;
-    color: #fff;
-}
-.support-services:hover .catename {
-    transition: 0.4s;
-    background-color: #838383;
-    border: 1px solid #838383;
-    color: #E6E6E6;
-}
-.support-services:hover .recruit {
-    transition: 0.4s;
-    background-color: #fff;
-    width: 26%;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    text-align: center;
-    color: rgba(233,146,46,0.96);
-    margin: 10px 0 20px 5px;
-}*/
 .support-services{
     box-shadow:3px 3px 3px #e0e0e0;
-    /*transition-duration: 0.3s;*/
 }
 .support-services:active{
-    margin-left:2px;
-    margin-top:2px;
-    /*box-shadow:none;*/
+    border: 6px solid #e6e6e6;
 }
 .support-services:hover{
-    /*margin-left:3px;
-    margin-top:3px;*/
-    /*box-shadow:none;*/
     cursor: pointer;
+    border: 6px solid #e6e6e6;
 }
 .support-services:hover .support-content h4, .support-services:hover .support-content p {
     color: #fff;
 }
 .support-all{
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -1105,7 +1057,7 @@ span.users {
   background-color: #E9EBEC;
 }
 .diposite-box {
-    width: 80%;
+    /*width: 80%;*/
     margin: 0 auto;
     background: #f5f5f5;
     padding: 40px;
@@ -2627,13 +2579,15 @@ span.users {
 .h6mar:hover{
     color: #2980B9;
     border-bottom: 5px solid #2980B9;
+    cursor: pointer;
 }
 .cardmar{
     margin:0 4%;
 }
 .catename{
     background-color: #E6E6E6;
-    width:20%;
+    width: max-content;
+    padding: 0 16px;
     border: 1px solid #E6E6E6;
     border-radius: 20px;
     text-align: center;
@@ -2644,6 +2598,15 @@ span.users {
     background-color: rgba(233,146,46,0.96);
     width:26%;
     border: 1px solid rgba(233,146,46,0.96);
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 10px 0 20px 5px;
+}
+.recruit2{
+    background-color: #343754;
+    width:26%;
+    border: 1px solid #343754;
     border-radius: 20px;
     text-align: center;
     color: #fff;
@@ -2673,6 +2636,18 @@ span.users {
 }
 .cardbt{
     margin:0;
+}
+.protitle{
+    padding-top: 17px;
+    padding-left: 110px;
+    margin:0;
+}
+.proname{
+    padding-top: 10px;
+}
+.prostart{
+    background-color: #fff;
+    padding-top: 15px;
 }
 /*----------------------------------------*/
 /*  21. Blog Sidebar Area

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 	
-<!-- Mirrored from rockstheme.com/rocks/aievari-live/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:23 GMT -->
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
 <head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -78,15 +78,15 @@
                                         <div class="collapse navbar-collapse" id="navbar-example">
                                             <div class="main-menu">
                                                 <ul class="nav navbar-nav navbar-right">
-                                                    <li><a class="pages" href="introduce.html">소개</a></li>
-                                                    <li><a class="pages" href="join.html">참여하기</a>
+                                                    <li><a class="pages" href="introduce.html" >소개</a></li>
+                                                    <li><a href="join.html">참여하기</a>
                                                         <ul class="sub-menu">
                                                             <li><a href="blog.html">웹</a></li>
                                                             <li><a href="blog-sidebar.html">앱</a></li>
                                                             <li><a href="blog-details.html">게임</a></li>
                                                             <li><a href="blog-details.html">인공지능</a></li>
                                                             <li><a href="blog-details.html">기타</a></li>
-                                                        </ul>
+                                                        </ul>                                                    
                                                     </li>
                                                     <li><a href="investment.html">Investment</a>
                                                         <ul class="sub-menu">
@@ -99,7 +99,7 @@
                                                             <li><a href="blog-details.html">Blog Details</a></li>
                                                             <li><a href="contact.html">contacts</a></li>
                                                         </ul>
-                                                    </li>   
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -166,7 +166,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline">
-                                <h3>회원가입</h3>
+                                <h3>프로젝트</h3>
                                 <hr>
                             </div>
                         </div>
@@ -176,121 +176,185 @@
         </div>
         <!-- End breadcumb Area -->
         <!-- Start Slider Area -->
-        <div class="signup-area page-padding">
-            <div class="container">
+        <div class="support-service-area fix prostart">
+            <div class="container conwidth">
                 <div class="row">
-                    <div class=" col-md-12 col-sm-12 col-xs-12">
-                        <div class="login-page signup-page">
-                            <div class="login-form signup-form">
-                                <div class="row">
-                                    <form id="contactForm" method="POST" action="http://rockstheme.com/rocks/aievari-live/contact.php" class="log-form">
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">아이디</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="text" id="id" class="signup-input midinput" required data-error="Please enter your name">
-                                            </div>
-                                            <div class="col-md-2 col-sm-12 col-xs-12">
-                                                <button id="check" class="same-check shadow">중복확인</button>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">비밀번호</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="text" id="password" class="signup-input" required data-error="Please enter your name">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">비밀번호 확인</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="text" id="passwordcheck" class="signup-input" required data-error="Please enter your name">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">이름</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="text" id="name" class="signup-input" required data-error="Please enter your name">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">이메일</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="email" id="email" class="signup-input" required data-error="Please enter your name">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">휴대전화</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="text" id="phone" class="signup-input" required data-error="Please enter your name">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">생년월일</div>
-                                            <div class="col-md-2 col-sm-12 col-xs-12 birthinput">
-                                                <input type="number" class="signup-input" name="year" min="1900" max="2022" placeholder="년">
-                                            </div>
-                                            <div class="col-md-2 col-sm-12 col-xs-12 birthinput">
-                                                <input type="number" class="signup-input" name="month" min="1" max="12" placeholder="월">
-                                            </div>
-                                            <div class="col-md-2 col-sm-12 col-xs-12">
-                                                <input type="number" class="signup-input" name="day" min="1" max="31" placeholder="일">
-                                            </div>
-                                        </div>
-                                        <hr class="signuphr">
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">학력정보</div>
-                                            <div class="col-md-7 col-sm-12 col-xs-12">
-                                                <input type="text" id="school" class="signup-input midinput" placeholder="학교명" required data-error="Please enter your name">
-                                            </div>
-                                            <div class="col-md-2 col-sm-12 col-xs-12">
-                                                <button id="schoolfind" class="same-check shadow">학교찾기</button>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt"> </div>
-                                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                                <input type="text" id="major" class="signup-input midinput" placeholder="학과명" required data-error="Please enter your name">
-                                            </div>
-                                            <div class="col-md-2 col-sm-12 col-xs-12">
-                                                <select id="schoolregister" class="signup-input midinput">
-                                                    <option value="1" selected>재학</option>
-                                                    <option value="2">휴학</option>
-                                                    <option value="3">졸업</option>
-                                                    <option value="4">직장인</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="col-md-3 col-sm-12 col-xs-12 lefttxt"> </div>
-                                            <div class="col-md-9 col-sm-12 col-xs-12">
-                                                <textarea type="text" id="career" class="signup-input " placeholder="사용가능 언어, 프로젝트 이력을 쓰시오." required data-error="Please enter your name"></textarea>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <button type="submit" id="submit" class="login-btn">가입하기</button>
-                                            <div id="msgSubmit" class="h3 hidden"></div> 
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <div class="clear"></div>
-                                            <div class="separetor"><span>Or with signup</span></div>
-                                            <div class="sign-icon">
-                                                <ul>
-                                                    <li><a class="facebook" href="#">Facebook</a></li>
-                                                    <li><a class="twitter" href="#">twitter</a></li>
-                                                    <li><a class="google" href="#">google+</a></li>
-                                                </ul>
-                                                <div class="acc-not">have an account?  <a href="login.html">Login</a></div>
-                                            </div>
-                                        </div>
-                                    </form> 
+                    <div>
+                        <a class="support-images" href="#"><i class="fa-solid fa-desktop cateicon"></i></a>
+                        <p class="protitle">스마트 홈가든을 이용한</p>
+                        <p class="protitle proname">○○○(대학생)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="support-service-area fix prostart">
+            <div class="container conwidth">
+                <div class="row ">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="deposite-content">
+                            <div class="diposite-box">
+                                <h4>Last deposite</h4>
+                                <span><i class="flaticon-005-savings"></i></span>
+                                <div class="deposite-table">
+                                    <table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Currency</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Admond sayhel</td>
+                                            <td>Jan 02, 2020</td>
+                                            <td>$1000</td>
+                                            <td>Bitcoin</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jonshon</td>
+                                            <td>Dec 12, 2019</td>
+                                            <td>$5000</td>
+                                            <td>USD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hopper</td>
+                                            <td>Dec 22, 2019</td>
+                                            <td>$4000</td>
+                                            <td>Ripple</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Admond sayhel</td>
+                                            <td>Jan 02, 2020</td>
+                                            <td>$3000</td>
+                                            <td>Bitcoin</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anjel july</td>
+                                            <td>Jan 05, 2020</td>
+                                            <td>$500</td>
+                                            <td>USD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lagisha</td>
+                                            <td>Jan 12, 2020</td>
+                                            <td>$5000</td>
+                                            <td>Bitcoin</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
+
+        <div class="support-service-area fix joinstart">
+            <div class="container conwidth">
+                <div class="row">
+                    <div class="support-all">
+                        <div class="support-services wow ">
+                            <a class="support-images" href="#"><i class="fa-solid fa-desktop cateicon"></i></a>
+                            <div class="support-content">
+                                <h6 class="catename">웹</h5>
+                                <h6 class="recruit">모집중</h5>
+                            </div>
+                            <p class="cardbt">○○○(대학생)</p>
+                            <p class="cardbt">2022-04-05~2022-10-10</p>
+                            <p class="num cardbt">모집인원 2/5</p>
+                        </div>
+                        <div class="support-services wow ">
+                            <a class="support-images" href="#"><i class="fa-solid fa-mobile-screen-button cateicon"></i></a>
+                            <div class="support-content">
+                                <h6 class="catename">앱</h5>
+                                <h6 class="recruit">모집중</h5>
+                            </div>
+                            <p class="cardbt">○○○(직장인)</p>
+                            <p class="cardbt">2022-04-05~2022-10-10</p>
+                            <p class="num cardbt">모집인원 2/5</p>
+                        </div>
+                        <div class="support-services wow ">
+                            <a class="support-images" href="#"><i class="fa-solid fa-gamepad cateicon"></i></a>
+                            <div class="support-content">
+                                <h6 class="catename">게임</h5>
+                                <h6 class="recruit2">마감</h5>
+                            </div>
+                            <p class="cardbt">○○○(취준생)</p>
+                            <p class="cardbt">2022-04-05~2022-10-10</p>
+                            <p class="num cardbt">모집인원 5/5</p>
+                        </div>
+                        <div class="support-services wow ">
+                            <a class="support-images" href="#"><i class="fa-solid fa-brain cateicon"></i></a>
+                            <div class="support-content">
+                                <h6 class="catename">인공지능</h5>
+                                <h6 class="recruit2">마감</h5>
+                            </div>
+                            <p class="cardbt">○○○(대학생)</p>
+                            <p class="cardbt">2022-04-05~2022-10-10</p>
+                            <p class="num cardbt">모집인원 5/5</p>
+                        </div>
+                        <div class="support-services wow ">
+                            <a class="support-images" href="#"><i class="fa-solid fa-globe cateicon"></i></a>
+                            <div class="support-content">
+                                <h6 class="catename">기타</h5>
+                                <h6 class="recruit">모집중</h5>
+                            </div>
+                            <p class="cardbt">○○○(대학생)</p>
+                            <p class="cardbt">2022-04-05~2022-10-10</p>
+                            <p class="num cardbt">모집인원 2/5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="page-area">
+            <div class="breadcumb-overlay backcolorgray"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div>
+                            <div class="section-headline white-headline bottomleft">
+                                <h2 class="font-var font-back">G<span class="bcolor">P</span>WM는?</h2>
+                                <h4 class="leftfontp">접근성이 좋습니다.</h4>
+                                <h5 class="leftfontw2">타사 사이트는 기업이나 단체가 프로젝트를 진행하지만 GPWM은 개인이 프로젝트를 진행함으로써 경험도 경력도 없는 학생들이 참여하기 쉽습니다.</h5>
+                                <h4 class="leftfontp">IT프로젝트를 쉽게 참여할 수 있습니다.</h4>
+                                <h5 class="leftfontw2">타사 사이트들은 IT프로젝트뿐만이 아닌 다른 주제의 프로젝트도 모여있어 찾기가 어렵지만 GPWM는 아닙니다.</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div>
+                            <div class="section-headline white-headline bottomleft">
+                                <div class="col-md-3 col-sm-12 col-xs-12">
+                                    <img src="/static/img/intro/finger1.png" class="bottomrightimg" alt=" ">
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <h5 class="nonmar">학생들의 참여도 증가</h5>
+                                    <h6 class="h6size">경험도 경력도 없는 학생들이 참여하기 쉬워 접근성이 좋아 학생들의 참여율을 증가시킬 수 있습니다.</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-12 blueimgmar">
+                                    <img src="/static/img/intro/wheel2.png" class="bottomrightimg" alt=" ">
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <h5 class="nonmar">학생들에게 '경험'제공</h5>
+                                    <h6 class="h6size">현재도 앞으로도 신입사원에게 가장 중요시하는 능력은 '경험'입니다.
+                                        이를 가지기엔 대학생으로써는 역부족이기 때문에 GPWM을 이용하여 
+                                        경험을 쌓고 성장할 수 있는 기회를 제공합니다.</h6>
+                                </div>
+                                <div class="col-md-3 col-sm-12 col-xs-12 blueimgmar">
+                                    <img src="/static/img/intro/person3.png" class="bottomrightimg" alt=" ">
+                                </div>
+                                <div class="col-md-9 col-sm-12 col-xs-12 ">
+                                    <h5 class="nonmar">구인구직 피로도 최소화 </h5>
+                                    <h6 class="h6size">팀원 모집시에 가장 힘든점은 괜찮은 사람을 구하는 것입니다. GPWM에선 기획서, 신청자의 소개서 등 여러단계를 거쳐 
+                                        모집에 대한 어려움을 최소화할 수 있습니다.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+		<!-- all js here -->
         <!-- Start Footer Area -->
         <footer class="footer1">
             <div class="footer-area">
@@ -424,5 +488,5 @@
 		<script src="/static/js/main.js"></script>
 	</body>
 
-<!-- Mirrored from rockstheme.com/rocks/aievari-live/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:23 GMT -->
+<!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
 </html>
