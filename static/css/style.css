@@ -3114,7 +3114,25 @@ span.users {
 }
 
 .conwidth {
-  width: 50%;
+  width: 80%;
+}
+
+@media (min-width:768px) {
+  .conwidth {
+    width: 750px
+  }
+}
+
+@media (min-width:992px) {
+  .conwidth {
+    width: 921px
+  }
+}
+
+@media (min-width:1200px) {
+  .conwidth {
+    width: 928px
+  }
 }
 
 .wow {
