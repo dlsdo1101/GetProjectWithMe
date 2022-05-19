@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>마이페이지</title>
+    <title>GetProjectWithMe</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -43,6 +43,11 @@
       src="https://kit.fontawesome.com/813a4a6269.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function enroll() {
+        alert("프로젝트 참여 신청이 되었습니다.");
+      }
+    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -168,7 +173,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="breadcrumb text-center">
               <div class="section-headline white-headline">
-                <h3>마이페이지</h3>
+                <h3>참여신청</h3>
                 <hr />
               </div>
             </div>
@@ -201,22 +206,13 @@
                       </h6>
                       <h6 class="prorightmid">-신분 : 학생</h6>
                       <h6 class="prorightmid">-휴대전화 : 010-1234-1234</h6>
-                      <button
-                        id="check"
-                        class="proedit shadow"
-                        onclick="location.href = 'mypage_edit.html'"
-                      >
-                        개인정보수정
-                      </button>
                     </div>
                   </div>
-                  <div class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu">
+                  <div
+                    class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu historyf"
+                  >
                     <input id="tab1" name="tab-menu" type="radio" checked />
-                    <label for="tab1">나의 이력</label>
-                    <input id="tab2" name="tab-menu" type="radio" />
-                    <label for="tab2">프로젝트 게시 내역</label>
-                    <input id="tab3" name="tab-menu" type="radio" />
-                    <label for="tab3">프로젝트 지원 내역</label>
+                    <label for="tab1" class="historyf">나의 이력</label>
                     <div
                       id="tab-content1"
                       class="col-md-12 col-sm-12 col-xs-12 tab-content"
@@ -233,41 +229,33 @@
                         ></textarea>
                       </div>
                     </div>
-                    <div
-                      id="tab-content2"
-                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
-                    >
-                      <div onClick="location.href='project.html'">
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          스마트 홈가든을 이용한
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          2022-04-05~2022-10-10
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12 enrolltxt">
+                      각오 / 하고싶은말
                     </div>
-                    <div
-                      id="tab-content3"
-                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
-                    >
-                      <div onClick="location.href='project.html'">
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          스마트 홈가든을 이용한
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          2022-04-05~2022-10-10
-                        </div>
-                      </div>
-                      <div onClick="location.href='project.html'">
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          스마트 홈가든을 이용한
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          2022-04-05~2022-10-10
-                        </div>
-                      </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <textarea
+                        type="text"
+                        id="career"
+                        class="signup-input"
+                        placeholder="추가로 각오, 하고 싶은 말을 자유롭게 입력해주세요."
+                        required
+                        data-error="Please enter your name"
+                      ></textarea>
                     </div>
                   </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 disf">
+                  <a
+                    id="signup"
+                    class="login-btn proenroll pad"
+                    href="project.html"
+                    onclick="enroll()"
+                    >신청하기</a
+                  >
+                  <div id="msgSubmit" class="h3 text-center hidden"></div>
+                  <div class="clearfix"></div>
                 </div>
               </div>
             </div>

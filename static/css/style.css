@@ -598,7 +598,7 @@ div#preloader {
 }
 
 .header-area.stick .main-menu ul.nav li ul.sub-menu li a:hover {
-  color: #e6922e;
+  color: #2980b9;
 }
 
 .header-area.stick .logo a.white-logo {
@@ -1756,7 +1756,6 @@ span.users {
 /*  14. Footer Area
 /*----------------------------------------*/
 .footer1 {
-  background: url(/static/img/background/fg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2556,6 +2555,21 @@ span.users {
   transition: 0.4s;
 }
 
+.proenroll {
+  border: 1px solid #f1f1f1;
+  background: #343754;
+  color: #fff;
+  width: max-content;
+}
+
+.proenroll:hover {
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  color: #5d6471;
+  transition: 0.4s;
+
+}
+
 .flex-box {
   display: -webkit-box;
   display: flex;
@@ -2805,13 +2819,13 @@ span.users {
 }
 
 .tabbox input:checked+label {
-  background: #fff;
+  background: #e0e0e0;
 }
 
 .tabbox .tab-content {
   display: none;
   width: 100%;
-  height: 100px;
+  height: auto;
   /*border: 1px solid #eee;*/
   font-size: 15px;
 }
@@ -2822,17 +2836,12 @@ span.users {
 
 #tab2:checked~#tab-content2 {
   display: block;
-  background-color: #e8f5d2;
+  background-color: #fff;
 }
 
 #tab3:checked~#tab-content3 {
   display: block;
-  background-color: #000;
-}
-
-#tab4:checked~#tab-content4 {
-  display: block;
-  background-color: #00aced;
+  background-color: #fff;
 }
 
 .tabmenu {
@@ -3127,6 +3136,7 @@ span.users {
 
 .cardbt {
   margin: 0;
+  font-size: 13px;
 }
 
 .protitle {
@@ -3168,6 +3178,48 @@ span.users {
 
 .marg {
   margin-right: 27px;
+}
+
+.disf {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.enrolltxt {
+  line-height: 35px;
+  text-align: left;
+  font-weight: 900;
+  font-size: large;
+}
+
+.addhr {
+  width: 100%;
+}
+
+.pad {
+  margin-right: -15px;
+}
+
+.tabbox .historyf {
+  display: table;
+}
+
+.postcon {
+  padding: 20px 0 20px 20px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 15px;
+  background: #f1f1f1;
+}
+
+.postcon:hover {
+  cursor: pointer;
+}
+
+.bol {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 /*----------------------------------------*/

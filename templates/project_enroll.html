@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>마이페이지</title>
+    <title>GetProjectWithMe</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -43,6 +43,11 @@
       src="https://kit.fontawesome.com/813a4a6269.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function enroll() {
+        alert("프로젝트가 등록되었습니다.");
+      }
+    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -103,7 +108,7 @@
                             <a class="pages" href="introduce.html">소개</a>
                           </li>
                           <li>
-                            <a class="pages" href="join.html">참여하기</a>
+                            <a href="join.html">참여하기</a>
                             <ul class="sub-menu">
                               <li><a href="blog.html">웹</a></li>
                               <li><a href="blog-sidebar.html">앱</a></li>
@@ -168,7 +173,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="breadcrumb text-center">
               <div class="section-headline white-headline">
-                <h3>마이페이지</h3>
+                <h3>프로젝트 등록</h3>
                 <hr />
               </div>
             </div>
@@ -178,96 +183,161 @@
     </div>
     <!-- End breadcumb Area -->
     <!-- Start Slider Area -->
-    <div class="login-area page-padding">
+    <div class="signup-area page-padding">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="my-page">
-              <div class="login-form">
+            <div class="login-page signup-page">
+              <div class="login-form signup-form">
                 <div class="row">
-                  <div class="profile">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                      <img
-                        src="/static/img/mypage/pro_girl.png"
-                        class="proimg"
-                        alt=" "
-                      />
+                  <form
+                    id="contactForm"
+                    method="POST"
+                    action="http://rockstheme.com/rocks/aievari-live/contact.php"
+                    class="log-form"
+                  >
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-12 col-sm-12 col-xs-12 enrolltxt">
+                        프로젝트 개요
+                      </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <input
+                          type="text"
+                          id="id"
+                          class="signup-input midinput"
+                          required
+                          data-error="Please enter your ID"
+                          placeholder="프로젝트 제목을 입력해주세요"
+                        />
+                      </div>
                     </div>
-                    <div class="col-md-7 col-sm-12 col-xs-12 proright">
-                      <h4>홍길동 <span>gildong@gmail.com</span></h4>
-                      <h6 class="prorightmid">-최종학력 : 대학(4년제) 재학</h6>
-                      <h6 class="prorightmid">
-                        -소속 : 평택대학교 융합소프트웨어학과
-                      </h6>
-                      <h6 class="prorightmid">-신분 : 학생</h6>
-                      <h6 class="prorightmid">-휴대전화 : 010-1234-1234</h6>
-                      <button
-                        id="check"
-                        class="proedit shadow"
-                        onclick="location.href = 'mypage_edit.html'"
-                      >
-                        개인정보수정
-                      </button>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-12 col-sm-12 col-xs-12 enrolltxt">
+                        프로젝트 기간
+                      </div>
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <input
+                          type="date"
+                          id="datestart"
+                          class="signup-input"
+                          required
+                          data-error="Please enter your PASSWORD"
+                        />
+                      </div>
+                      <div class="col-md-1 col-sm-12 col-xs-12 lefttxt">~</div>
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <input
+                          type="date"
+                          id="dateend"
+                          class="signup-input"
+                          required
+                          data-error="Please enter your PASSWORD"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu">
-                    <input id="tab1" name="tab-menu" type="radio" checked />
-                    <label for="tab1">나의 이력</label>
-                    <input id="tab2" name="tab-menu" type="radio" />
-                    <label for="tab2">프로젝트 게시 내역</label>
-                    <input id="tab3" name="tab-menu" type="radio" />
-                    <label for="tab3">프로젝트 지원 내역</label>
-                    <div
-                      id="tab-content1"
-                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
-                    >
-                      <div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-4 col-sm-12 col-xs-12 enrolltxt">
+                        기술분야
+                      </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <select class="signup-input" id="skill" name="skill">
+                          <option>선택</option>
+                          <option value="a">웹</option>
+                          <option value="b">앱</option>
+                          <option value="c">게임</option>
+                          <option value="d">인공지능</option>
+                          <option value="e">기타</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 col-sm-12 col-xs-12 enrolltxt">
+                        주제영역
+                      </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">
+                        <select class="signup-input" id="topic" name="topic">
+                          <option>선택</option>
+                          <option value="a">생활</option>
+                          <option value="b">업무</option>
+                          <option value="c">공공/교통</option>
+                          <option value="d">금융/핀테크</option>
+                          <option value="e">의료</option>
+                          <option value="f">교육</option>
+                          <option value="g">유통/쇼핑</option>
+                          <option value="h">엔터테인먼트</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-4 col-sm-12 col-xs-12 enrolltxt">
+                        프로젝트 개요서 첨부
+                      </div>
+                      <div class="col-md-5 col-sm-12 col-xs-12">
+                        <input
+                          type="text"
+                          id="name"
+                          class="signup-input"
+                          required
+                          data-error="Please enter your NAME"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-4 col-sm-12 col-xs-12 enrolltxt">
+                        상태
+                      </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12 gen">
+                        <input
+                          type="radio"
+                          name="state"
+                          value="ing"
+                          checked
+                        />모집중
+                        <input type="radio" name="state" value="end" />마감
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-4 col-sm-12 col-xs-12 enrolltxt">
+                        모집인원
+                      </div>
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <input
+                          type="text"
+                          id="name"
+                          class="signup-input"
+                          required
+                          data-error="Please enter your NAME"
+                          placeholder="0"
+                        />
+                      </div>
+                      <div class="col-md-1 col-sm-12 col-xs-12 lefttxt">명</div>
+                    </div>
+                    <hr class="signuphr addhr" />
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-12 col-sm-12 col-xs-12 enrolltxt">
+                        추가사항
+                      </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
                         <textarea
                           type="text"
                           id="career"
                           class="signup-input"
-                          placeholder="사용가능 언어, 프로젝트 이력을 쓰시오."
+                          placeholder="추가사항을 입력해주세요."
                           required
                           data-error="Please enter your name"
-                          readonly
                         ></textarea>
                       </div>
                     </div>
-                    <div
-                      id="tab-content2"
-                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
-                    >
-                      <div onClick="location.href='project.html'">
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          스마트 홈가든을 이용한
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          2022-04-05~2022-10-10
-                        </div>
-                      </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 disf">
+                      <a
+                        id="signup"
+                        class="login-btn proenroll"
+                        href="join.html"
+                        onclick="enroll()"
+                        >등록하기</a
+                      >
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
                     </div>
-                    <div
-                      id="tab-content3"
-                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
-                    >
-                      <div onClick="location.href='project.html'">
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          스마트 홈가든을 이용한
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          2022-04-05~2022-10-10
-                        </div>
-                      </div>
-                      <div onClick="location.href='project.html'">
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          스마트 홈가든을 이용한
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12 postcon">
-                          2022-04-05~2022-10-10
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -275,6 +345,7 @@
         </div>
       </div>
     </div>
+
     <!-- all js here -->
     <!-- Start Footer Area -->
     <footer class="footer1">
