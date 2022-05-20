@@ -1,24 +1,34 @@
-<h1>게시판</h1>
-<tr>
-    <th>제목 |</th>
-    <th>작성자 |</th>
-    <th>작성일시</th></br>
-</tr>
-<body>
-    {% for writing in writing_list %}
-    <!--뷰에서 writing_list라는 변수에 담은 것들을 반복한다.-->
-    <table>
-        <th>{{writing.subject}} | </th>
-        <th>{{writing.author}} | </th>
-        <th>{{writing.create_date}}</th></br>
+{% block content %}
+<div class="row mt-5">
+  <div class="col-12">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">제목</th>
+          <th scope="col">아이디</th>
+          <th scope="col">작성일</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for writing in writing_list %}
+        <tr onclick="location.href='/board/posting/{{ writing.id }}/'">
+          <td>{{ writing.subject }}</td>
+          <td>{{ writing.author }}</td>
+          <td>{{ writing.create_date }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
-    {% endfor %}
-</body>
-
-
-{% if user.is_authenticated %}
-<a href="{% url 'create' %}" class="btn btn-primary">글쓰기</a>
-{% else %}
-<a href="{% url "login" %}">로그인 후 이용가능</a>
-{% endif %}
-
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    {% if user.is_authenticated %}
+    <a href="{% url 'create' %}" class="btn btn-primary">글쓰기</a>
+    {% else %}
+    <a href="{% url "login" %}">로그인 후 이용가능</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

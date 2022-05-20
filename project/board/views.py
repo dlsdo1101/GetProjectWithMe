@@ -28,5 +28,10 @@ def create(request):
     # 없으면 그냥 form 작성을 위한 객체를 넘긴다.
     return render(request, 'create.html', context)
 
+def posting(request, pk):
+    post = Writing.objects.get(pk=pk)
+    # pk 에 해당하는 글을 가지고 올 수 있게 된다.
+    return render(request, 'posting.html', {'post':post})
+    
 
     
