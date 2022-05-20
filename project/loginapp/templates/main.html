@@ -107,7 +107,7 @@
                             <a class="pages" href="introduce.html">소개</a>
                           </li>
                           <li>
-                            <a class="pages" href="join.html">참여하기</a>
+                            <a class="pages" href="{% url "list" %}">참여하기</a>
                             <ul class="sub-menu">
                               <li><a href="blog.html">웹</a></li>
                               <li><a href="blog-sidebar.html">앱</a></li>
@@ -204,7 +204,7 @@
                   아이디어 혹은 개요서를 작성하여 게시하여 팀원을 모집하세요.
                 </p>
                 <div class="layer-1-3 textleftalign">
-                  <a href="join.html" class="ready-btn left-btn"
+                  <a href="{% url 'list' %}" class="ready-btn left-btn"
                     >프로젝트 바로가기 <i class="fa-solid fa-right-long"></i
                   ></a>
                 </div>

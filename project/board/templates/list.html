@@ -15,8 +15,10 @@
     {% endfor %}
 </body>
 
+
 {% if user.is_authenticated %}
 <a href="{% url 'create' %}" class="btn btn-primary">글쓰기</a>
 {% else %}
 <a href="{% url "login" %}">로그인 후 이용가능</a>
 {% endif %}
+
