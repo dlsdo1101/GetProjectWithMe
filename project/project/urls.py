@@ -20,4 +20,5 @@ import loginapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('loginapp.urls')),
+    path('board/', include('board.urls')),
 ]

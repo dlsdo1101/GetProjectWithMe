@@ -1,0 +1,18 @@
+<h1>게시판</h1>
+<tr>
+    <th>제목 |</th>
+    <th>작성자 |</th>
+    <th>작성일시</th></br>
+</tr>
+<body>
+    {% for writing in writing_list %}
+    <!--뷰에서 writing_list라는 변수에 담은 것들을 반복한다.-->
+    <table>
+        <th>{{writing.subject}} | </th>
+        <th>{{writing.author}} | </th>
+        <th>{{writing.create_date}}</th></br>
+    </table>
+    {% endfor %}
+</body>
+
+<a href="{% url 'create' %}" class="btn btn-primary">글쓰기</a>
