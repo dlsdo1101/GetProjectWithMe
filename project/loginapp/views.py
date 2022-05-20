@@ -13,7 +13,7 @@ def signup(request):
             )
             auth.login(request, user)
 
-            return redirect('home')
+            return redirect('main')
 
     return render(request, "signup.html")
 
@@ -28,7 +28,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('home')
+            return redirect('main')
         else:
             return render(request, "login.html", {
                 'error': 'Username or Password is incorrect.',
@@ -36,11 +36,11 @@ def login(request):
     else:
         return render(request, "login.html")
     
-def home(request):
-    return render(request, 'home.html')
+def main(request):
+    return render(request, 'main.html')
 
 def logout(request):
     auth.logout(request)
-    redirect('home')
+    redirect('main')
     return render(request,'login.html')
     
