@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>참여하기</title>
+    <title>GetProjectWithMe</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -43,6 +43,11 @@
       src="https://kit.fontawesome.com/813a4a6269.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function enroll() {
+        alert("프로젝트 참여 신청이 되었습니다.");
+      }
+    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -107,13 +112,13 @@
                             <a class="pages" href="{% url "introduce" %}">소개</a>
                           </li>
                           <li>
-                            <a href="{% url "list" %}">참여하기</a>
+                            <a class="pages" href="{% url "list" %}">참여하기</a>
                             <ul class="sub-menu">
-                              <li><a href="join.html">웹</a></li>
-                              <li><a href="join.html">앱</a></li>
-                              <li><a href="join.html">게임</a></li>
-                              <li><a href="join.html">인공지능</a></li>
-                              <li><a href="join.html">기타</a></li>
+                              <li><a href="blog.html">웹</a></li>
+                              <li><a href="blog-sidebar.html">앱</a></li>
+                              <li><a href="blog-details.html">게임</a></li>
+                              <li><a href="blog-details.html">인공지능</a></li>
+                              <li><a href="blog-details.html">기타</a></li>
                             </ul>
                           </li>
                         </ul>
@@ -142,10 +147,10 @@
                 <nav id="dropdown">
                   <ul>
                     <li>
-                      <a class="pages" href="{% url "introduce" %}">소개</a>
+                      <a class="pages" href="introduce.html">소개</a>
                     </li>
                     <li>
-                      <a class="pages" href="{% url "list" %}">참여하기</a>
+                      <a class="pages" href="join.html">참여하기</a>
                       <ul class="sub-menu">
                         <li><a href="blog.html">웹</a></li>
                         <li><a href="blog-sidebar.html">앱</a></li>
@@ -172,7 +177,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="breadcrumb text-center">
               <div class="section-headline white-headline">
-                <h3>참여하기</h3>
+                <h3>참여신청</h3>
                 <hr />
               </div>
             </div>
@@ -180,61 +185,89 @@
         </div>
       </div>
     </div>
-    <div class="page-area">
-      <div class="breadcumb-overlay backcolorwhite"></div>
-      <div class="container catecenter2">
-        <div class="col-md-12 col-sm-12 col-xs-12 catecenter">
-          <h6 class="h6mar">전체</h6>
-          <h6 class="h6mar">웹</h6>
-          <h6 class="h6mar">앱</h6>
-          <h6 class="h6mar">게임</h6>
-          <h6 class="h6mar">인공지능</h6>
-          <h6 class="h6mar">기타</h6>
-        </div>
-      </div>
-    </div>
     <!-- End breadcumb Area -->
-    {% block content %}
-    <div class="container conwidth">
-      <div class="row">
-        <div class="support-all">
-          <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">분야</th>
-                  <th scope="col">제목</th>
-                  <th scope="col">작성자</th>
-                  <th scope="col">작성일</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {% for writing in writing_list %}
-                
-                <tr onclick="location.href='/board/posting/{{ writing.id }}/'">
-                  <td>{{ writing.technical_field }}</td>
-                  <td>{{ writing.title }}</td>
-                  <td>{{ writing.author }}</td>
-                  <td>{{ writing.create_date }}</td>
-                </tr>
-                {% endfor %}
-              </tbody>
-          </table>
-        </div>
-        
-          <div class="col-md-12 col-sm-12 col-xs-12 disf">
-            {% if user.is_authenticated %}
-            <a id="signup" class="login-btn proenroll" href="{% url 'create' %}">프로젝트 등록</a>
-            {% else %}
-            <a id="signup" class="login-btn proenroll" href="{% url "login" %}">로그인 후 이용가능</a>
-            {% endif %}
-            <div id="msgSubmit" class="h3 text-center hidden"></div>
-            <div class="clearfix"></div>
+    <!-- Start Slider Area -->
+    <div class="login-area page-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="my-page">
+              <div class="login-form">
+                <div class="row">
+                  <div class="profile">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                      <img
+                        src="/static/img/mypage/pro_girl.png"
+                        class="proimg"
+                        alt=" "
+                      />
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12 proright">
+                      <h4>홍길동 <span>gildong@gmail.com</span></h4>
+                      <h6 class="prorightmid">-최종학력 : 대학(4년제) 재학</h6>
+                      <h6 class="prorightmid">
+                        -소속 : 평택대학교 융합소프트웨어학과
+                      </h6>
+                      <h6 class="prorightmid">-신분 : 학생</h6>
+                      <h6 class="prorightmid">-휴대전화 : 010-1234-1234</h6>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu historyf"
+                  >
+                    <input id="tab1" name="tab-menu" type="radio" checked />
+                    <label for="tab1" class="historyf">나의 이력</label>
+                    <div
+                      id="tab-content1"
+                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
+                    >
+                      <div>
+                        <textarea
+                          type="text"
+                          id="career"
+                          class="signup-input"
+                          placeholder="사용가능 언어, 프로젝트 이력을 쓰시오."
+                          required
+                          data-error="Please enter your name"
+                          readonly
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12 enrolltxt">
+                      각오 / 하고싶은말
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <textarea
+                        type="text"
+                        id="career"
+                        class="signup-input"
+                        placeholder="추가로 각오, 하고 싶은 말을 자유롭게 입력해주세요."
+                        required
+                        data-error="Please enter your name"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 disf">
+                  <a
+                    id="signup"
+                    class="login-btn proenroll pad"
+                    href="{% url "list" %}"
+                    onclick="enroll()"
+                    >신청하기</a 
+                  >
+                  <div id="msgSubmit" class="h3 text-center hidden"></div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          {% endblock %}
-        
+        </div>
       </div>
     </div>
+    <!-- all js here -->
     <!-- Start Footer Area -->
     <footer class="footer1">
       <div class="footer-area-bottom">

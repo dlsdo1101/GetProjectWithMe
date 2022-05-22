@@ -1,9 +1,322 @@
-<html>
-    <body>
-        <h1>게시글 개별 페이지입니다</h1>
-        <p>제목: {{post.subject}}</p>
-        <p>작성자: {{post.author}}</p>
-        <p>내용: {{post.content}}</p>
-    </body>
-</html>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>GetProjectWithMe</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/static/img/logo/favicon.png"
+    />
+
+    <!-- all css here -->
+
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/static/css/owl.transitions.css" />
+    <!-- Animate css -->
+    <link rel="stylesheet" href="/static/css/animate.css" />
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="/static/css/meanmenu.min.css" />
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/css/themify-icons.css" />
+    <link rel="stylesheet" href="/static/css/flaticon.css" />
+    <!-- magnific css -->
+    <link rel="stylesheet" href="/static/css/magnific.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+
+    <!-- modernizr css -->
+    <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/813a4a6269.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+    <div id="preloader"></div>
+    <header class="header-one">
+      <!-- Start top bar -->
+      <!-- End top bar -->
+      <!-- header-area start -->
+      <div id="sticker" class="header-area hidden-xs">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="row">
+                <!-- logo start -->
+                <div class="col-md-2 col-sm-3">
+                  <div class="logo">
+                    <!-- Brand -->
+                    <a
+                      class="navbar-brand page-scroll white-logo"
+                      href="{% url "main" %}"
+                    >
+                      <img src="/static/img/logo/GPWM_logo.png" alt="" />
+                    </a>
+                    <a
+                      class="navbar-brand page-scroll black-logo"
+                      href="{% url "main" %}"
+                    >
+                      <img src="/static/img/logo/GPWM_logo.png" alt="" />
+                    </a>
+                  </div>
+                  <!-- logo end -->
+                </div>
+                <div class="col-md-10 col-sm-9">
+                  <div class="header-right-link usericonflex">
+                    <!-- search option end -->
+                    <div class="usericon">
+                      <a class="pages iconcolor" href="mypage.html"
+                        ><i class="fa-solid fa-user"></i
+                      ></a>
+                    </div>
+                    <div class="loginm">
+                        {% if user.is_authenticated %}
+                        <a class="s-menu" href="{% url "logout" %}">{{ user.username }}(로그아웃)</a>
+                        {% else %}
+                        <a class="s-menu" href="{% url "login" %}">로그인</a>
+                        {% endif %}
+                    </div>
+                  </div>
+                  <!-- mainmenu start -->
+                  <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="navbar-example">
+                      <div class="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li>
+                            <a class="pages" href="{% url "introduce" %}">소개</a>
+                          </li>
+                          <li>
+                            <a href="{% url "list" %}">참여하기</a>
+                            <ul class="sub-menu">
+                              <li><a href="blog.html">웹</a></li>
+                              <li><a href="blog-sidebar.html">앱</a></li>
+                              <li><a href="blog-details.html">게임</a></li>
+                              <li><a href="blog-details.html">인공지능</a></li>
+                              <li><a href="blog-details.html">기타</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  <!-- mainmenu end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-area end -->
+      <!-- mobile-menu-area start -->
+      <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mobile-menu">
+                <div class="logo">
+                  <a href="{% url "main" %}"
+                    ><img src="/static/img/logo/logo.png" alt=""
+                  /></a>
+                </div>
+                <nav id="dropdown">
+                  <ul>
+                    <li>
+                      <a class="pages" href="introduce.html">소개</a>
+                    </li>
+                    <li>
+                      <a class="pages" href="join.html">참여하기</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.html">웹</a></li>
+                        <li><a href="blog-sidebar.html">앱</a></li>
+                        <li><a href="blog-details.html">게임</a></li>
+                        <li><a href="blog-details.html">인공지능</a></li>
+                        <li><a href="blog-details.html">기타</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile-menu-area end -->
+    </header>
+    <!-- header end -->
+    <!-- Start breadcumb Area -->
+    <div class="page-area">
+      <div class="breadcumb-overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="breadcrumb text-center">
+              <div class="section-headline white-headline">
+                <h3>참여하기</h3>
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End breadcumb Area -->
+    <!-- Start Slider Area -->
+    <div class="support-service-area fix prostart">
+      <div class="container conwidth">
+        <div class="row">
+          <div>
+            <a class="support-images" href="#"
+              ><i class="fa-solid fa-desktop cateicon"></i
+            ></a>
+            <p class="protitle">{{post.title}}</p>
+            <p class="protitle proname">{{post.author}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="support-service-area fix prostart">
+      <div class="container conwidth">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="deposite-content">
+              <div class="diposite-box">
+                <div class="deposite-table">
+                  <table>
+                    <tr>
+                        <td>연락처</td>
+                        <td class="tdright">{{post.email}}</td>
+                      </tr>
+                    <tr>
+                      <td>프로젝트기간</td>
+                      <td class="tdright">2022-04-05~2022-10-10</td>
+                    </tr>
+                    <tr>
+                      <td>기술분야</td>
+                      <td class="tdright">
+                        <h6 class="catename procate">{{post.technical_field}}</h6>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>주제영역</td>
+                      <td class="tdright">{{post.topic_area}}</td>
+                    </tr>
+                    <tr>
+                      <td>프로젝트개요</td>
+                      <td class="tdright">{{post.title}}</td>
+                    </tr>
+                    <tr>
+                      <td>프로젝트개요서</td>
+                      <td class="tdright profile_pdf">
+                        <iframe
+                          src="/static/img/project/개요서.pdf"
+                          style="width: 100%; height: 100%"
+                        ></iframe>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>상태</td>
+                      <td class="tdright">
+                        <h6 class="recruit procate">모집중</h6>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>모집인원</td>
+                      <td class="tdright">2 / {{post.team}}</td>
+                    </tr>
+                    <tr>
+                      <td>추가사항</td>
+                      <td class="tdright">....추가사항....</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 disf">
+          <a id="signup" class="login-btn proenroll pad" href="{% url "participate" %}"
+            >참여신청</a
+          >
+          <div id="msgSubmit" class="h3 text-center hidden"></div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- all js here -->
+    <!-- Start Footer Area -->
+    <footer class="footer1">
+      <div class="footer-area-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="copyright">
+                <p class="fontwei">
+                  <span>GetProjectWithMe</span>
+                  <span><a href="#" class="colorblue">이용약관</a></span>
+                  <span
+                    ><a href="{% url "introduce" %}" class="colorblue">소개</a></span
+                  >
+                  <span
+                    ><a href="{% url "list" %}" class="colorblue">참여하기</a></span
+                  >
+                </p>
+                <p class="txtsiz">
+                  Copyright © 2020
+                  <a href="#">Aievari</a> All Rights Reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer area -->
+
+    <!-- all js here -->
+
+    <!-- jquery latest version -->
+    <script src="/static/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <!-- stellar js -->
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <!-- magnific js -->
+    <script src="/static/js/magnific.min.js"></script>
+    <!-- wow js -->
+    <script src="/static/js/wow.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="/static/js/jquery.meanmenu.js"></script>
+    <!-- Form validator js -->
+    <script src="/static/js/form-validator.min.js"></script>
+    <!-- plugins js -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- main js -->
+    <script src="/static/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
+</html>

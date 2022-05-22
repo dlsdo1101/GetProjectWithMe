@@ -32,6 +32,9 @@ def posting(request, pk):
     post = Writing.objects.get(pk=pk)
     # pk 에 해당하는 글을 가지고 올 수 있게 된다.
     return render(request, 'posting.html', {'post':post})
+
+def participate(request):
+    return render(request, 'participate.html')
     
 
     
