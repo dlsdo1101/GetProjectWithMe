@@ -40,6 +40,9 @@ def login(request):
 def main(request):
     return render(request, 'main.html')
 
+def introduce(request):
+    return render(request, 'introduce.html')
+
 def logout(request):
     auth.logout(request)
     redirect('main')
