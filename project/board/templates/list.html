@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>GetProjectWithMe</title>
+    <title>참여하기</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -142,7 +142,7 @@
                 <nav id="dropdown">
                   <ul>
                     <li>
-                      <a class="pages" href="introduce.html">소개</a>
+                      <a class="pages" href="{% url "introduce" %}">소개</a>
                     </li>
                     <li>
                       <a class="pages" href="{% url "list" %}">참여하기</a>
@@ -244,7 +244,7 @@
                   <span>GetProjectWithMe</span>
                   <span><a href="#" class="colorblue">이용약관</a></span>
                   <span
-                    ><a href="introduce.html" class="colorblue">소개</a></span
+                    ><a href="{% url "introduce" %}" class="colorblue">소개</a></span
                   >
                   <span
                     ><a href="{% url "list" %}" class="colorblue">참여하기</a></span
