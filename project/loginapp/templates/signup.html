@@ -1,23 +1,320 @@
-<h1>회원가입 페이지. </h1>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>회원가입</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<form action="{% url 'signup' %}" method="POST" >
-{% csrf_token %}
-    ID:
-    <br>
-    <input name='username' type='text' value=''>
-    <br>
-    Password:
-    <br>
-    <input name='password1' type="password" value=''>
-    <br>
-    Confirm Password:
-    <br>
-    <input name='password2' type="password" value=''>
-    <br>
-    Email: 
-    <br>
-    <input name="email" type="email">
-    <br>
-    <br>
-    <input class='btn btn-primary' type="submit" value="signup">
-</form>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/static/img/logo/favicon.png"
+    />
+
+    <!-- all css here -->
+
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/static/css/owl.transitions.css" />
+    <!-- Animate css -->
+    <link rel="stylesheet" href="/static/css/animate.css" />
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="/static/css/meanmenu.min.css" />
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/css/themify-icons.css" />
+    <link rel="stylesheet" href="/static/css/flaticon.css" />
+    <!-- magnific css -->
+    <link rel="stylesheet" href="/static/css/magnific.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+
+    <!-- modernizr css -->
+    <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/813a4a6269.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+    <div id="preloader"></div>
+    <header class="header-one">
+      <!-- Start top bar -->
+      <!-- End top bar -->
+      <!-- header-area start -->
+      <div id="sticker" class="header-area hidden-xs">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="row">
+                <!-- logo start -->
+                <div class="col-md-2 col-sm-3">
+                  <div class="logo">
+                    <!-- Brand -->
+                    <a class="navbar-brand page-scroll white-logo" href="{% url "main" %}">
+                      <img src="/static/img/logo/GPWM_logo.png" alt="" />
+                    </a>
+                    <a class="navbar-brand page-scroll black-logo" href="{% url "main" %}">
+                      <img src="/static/img/logo/GPWM_logo.png" alt="" />
+                    </a>
+                  </div>
+                  <!-- logo end -->
+                </div>
+                <div class="col-md-10 col-sm-9">
+                  <div class="header-right-link usericonflex">
+                    <!-- search option end -->
+                    <div class="usericon">
+                      <a class="pages iconcolor" href="mypage.html"
+                        ><i class="fa-solid fa-user"></i
+                      ></a>
+                    </div>
+                    <div class="loginm">
+                      <a class="s-menu" href="{% url "login" %}">로그인</a>
+                    </div>
+                  </div>
+                  <!-- mainmenu start -->
+                  <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="navbar-example">
+                      <div class="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li>
+                            <a class="pages" href="introduce.html">소개</a>
+                          </li>
+                          <li>
+                            <a class="pages" href="{% url "list" %}">참여하기</a>
+                            <ul class="sub-menu">
+                              <li><a href="blog.html">웹</a></li>
+                              <li><a href="blog-sidebar.html">앱</a></li>
+                              <li><a href="blog-details.html">게임</a></li>
+                              <li><a href="blog-details.html">인공지능</a></li>
+                              <li><a href="blog-details.html">기타</a></li>
+                            </ul>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  <!-- mainmenu end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header-area end -->
+      <!-- mobile-menu-area start -->
+      <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mobile-menu">
+                <div class="logo">
+                  <a href="main.html"
+                    ><img src="/static/img/logo/logo.png" alt=""
+                  /></a>
+                </div>
+                <nav id="dropdown">
+                  <ul>
+                    <li>
+                      <a class="pages" href="introduce.html">소개</a>
+                    </li>
+                    <li>
+                      <a class="pages" href="join.html">참여하기</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.html">웹</a></li>
+                        <li><a href="blog-sidebar.html">앱</a></li>
+                        <li><a href="blog-details.html">게임</a></li>
+                        <li><a href="blog-details.html">인공지능</a></li>
+                        <li><a href="blog-details.html">기타</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile-menu-area end -->
+    </header>
+    <!-- header end -->
+    <!-- Start breadcumb Area -->
+    <div class="page-area">
+      <div class="breadcumb-overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="breadcrumb text-center">
+              <div class="section-headline white-headline">
+                <h3>회원가입</h3>
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End breadcumb Area -->
+    <!-- Start Slider Area -->
+    <div class="signup-area page-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="login-page signup-page">
+              <div class="login-form signup-form">
+                <div class="row">
+                  <form
+                    id="contactForm"
+                    method="POST"
+                    action="{% url 'signup'%}"
+                    class="log-form"
+                  >
+                    {% csrf_token %}
+                    <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                      아이디
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                      <input
+                        type="text"
+                        name="username"
+                        class="form-control"
+                        id="username"
+                        required
+                        data-error="Please enter your ID"
+                      />
+                    </div>
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        비밀번호
+                      </div>
+                      <div class="col-md-7 col-sm-12 col-xs-12">
+                        <input
+                          type="password"
+                          name="password1"
+                          class="form-control"
+                          id="password1"
+                          required
+                          data-error="Please enter your PASSWORD"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        비밀번호 확인
+                      </div>
+                      <div class="col-md-7 col-sm-12 col-xs-12">
+                        <input
+                          type="password"
+                          name="password2"
+                          class="form-control"
+                          id="password2"
+                          required
+                          data-error="Please enter your PASSWORD CHECK"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        이메일
+                      </div>
+                      <div class="col-md-7 col-sm-12 col-xs-12">
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          id="email"
+                          required
+                          data-error="Please enter your EMAIL"
+                        />
+                      </div> 
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <button type="submit" id="submit" class="login-btn">
+                        가입하기
+                      </button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- all js here -->
+    <!-- Start Footer Area -->
+    <footer class="footer1">
+      
+      <div class="footer-area-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="copyright">
+                <p class="fontwei">
+                  <span>GetProjectWithMe</span>
+                  <span><a href="#" class="colorblue">이용약관</a></span>
+                  <span
+                    ><a href="introduce.html" class="colorblue">소개</a></span
+                  >
+                  <span
+                    ><a href="join.html" class="colorblue">참여하기</a></span
+                  >
+                </p>
+                <p class="txtsiz">
+                  Copyright © 2020
+                  <a href="#">Aievari</a> All Rights Reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer area -->
+
+    <!-- all js here -->
+
+    <!-- jquery latest version -->
+    <script src="/static/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <!-- stellar js -->
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <!-- magnific js -->
+    <script src="/static/js/magnific.min.js"></script>
+    <!-- wow js -->
+    <script src="/static/js/wow.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="/static/js/jquery.meanmenu.js"></script>
+    <!-- Form validator js -->
+    <script src="/static/js/form-validator.min.js"></script>
+
+    <!-- main js -->
+    <script src="/static/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
+</html>
