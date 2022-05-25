@@ -7,5 +7,6 @@ urlpatterns = [
     path('', views.list, name='list'),  # list를 보여주는 뷰와 연결한다.
     path('create/', views.create, name='create'),#글의 작성화면
     path('posting/<int:pk>/', views.posting, name='posting'),
-    path('participate/', views.participate, name='participate')
+    path('participate/', views.participate, name='participate'),
+    path('login/', views.login, name='login')
 ]

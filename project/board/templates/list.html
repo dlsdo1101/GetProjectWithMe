@@ -210,13 +210,15 @@
 
               <tbody>
                 {% for writing in writing_list %}
-                
+                {% if user.is_authenticated %}
                 <tr onclick="location.href='/board/posting/{{ writing.id }}/'">
                   <td>{{ writing.technical_field }}</td>
                   <td>{{ writing.title }}</td>
                   <td>{{ writing.author }}</td>
                   <td>{{ writing.create_date }}</td>
                 </tr>
+                {% endif %}
+                <tr onclick="location.href='/loginapp/login/'"></tr>
                 {% endfor %}
               </tbody>
           </table>

@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Writing  # 모델을 불러온다.
-
+from django.contrib.auth.models import User
+from django.contrib import auth
 
 def list(request):
     writing_list = Writing.objects.all()  # 객체들을 다 불러온다.
@@ -38,3 +39,22 @@ def participate(request):
     
 
     
+
+def login(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(
+            request, username=username, password=password
+        )
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('main')
+        else:
+            return render(request, "login.html", {
+                'error': 'Username or Password is incorrect.',
+            })
+    else:
+        return render(request, "login.html")
