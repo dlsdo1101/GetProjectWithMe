@@ -21,6 +21,7 @@ class Writing(models.Model):
        ('교육', '교육'),
        ('유통/쇼핑', '유통/쇼핑'),
        ('엔터테인먼트', '엔터테인먼트'), 
+       ('기타', '기타')
     }
     
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)  # 유저모델과 연결!
