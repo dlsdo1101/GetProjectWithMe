@@ -11,6 +11,8 @@ def signup(request):
                 username=request.POST['username'],
                 password=request.POST['password1'],
                 email=request.POST['email'],
+                last_name=request.POST['last_name'],
+                first_name=request.POST['first_name'],
             )
             auth.login(request, user)
 
