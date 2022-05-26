@@ -190,7 +190,7 @@
               ><i class="fa-solid fa-desktop cateicon"></i
             ></a>
             <p class="protitle">{{post.title}}</p>
-            <p class="protitle proname">{{post.author}}</p>
+            <p class="protitle proname">{{post.author.last_name}}</p>
           </div>
         </div>
       </div>
@@ -205,7 +205,7 @@
                   <table>
                     <tr>
                         <td>연락처</td>
-                        <td class="tdright">{{post.email}}</td>
+                        <td class="tdright">{{post.author.email}}</td>
                       </tr>
                     <tr>
                       <td>프로젝트기간</td>
@@ -242,11 +242,23 @@
                     </tr>
                     <tr>
                       <td>모집인원</td>
-                      <td class="tdright">2 / {{post.team}}</td>
+                      <td class="tdright">{{post.team}}</td>
                     </tr>
                     <tr>
-                      <td>추가사항</td>
-                      <td class="tdright">....추가사항....</td>
+                      <td>경력</td>
+                      <td class="tdright">{{post.author.first_name}}</td>
+                    </tr>
+                    <tr>
+                      <td>최종학력</td>
+                      <td class="tdright">{{post.최종학력}}</td>
+                    </tr>
+                    <tr>
+                      <td>소속</td>
+                      <td class="tdright">{{post.소속}}</td>
+                    </tr>
+                    <tr>
+                      <td>신분</td>
+                      <td class="tdright">{{post.신분}}</td>
                     </tr>
                   </table>
                 </div>

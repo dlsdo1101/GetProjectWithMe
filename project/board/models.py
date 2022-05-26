@@ -26,13 +26,16 @@ class Writing(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)  # 유저모델과 연결!
     
     title = models.CharField(max_length=200, default = '') #프로젝트 개요
-    email = models.CharField(max_length=30, default = '') #연락처
     #프로젝트 기간
     technical_field = models.CharField(max_length=80, choices=TECHNICAL_CHOICES, default = '') #기술분야
     topic_area = models.CharField(max_length=80, choices=TOPIC_CHOICES, default = '')#주제영역
     content = models.TextField('프로젝트 개요서 첨부')  # 프로젝트 개요서 첨부
     #상태
     team = models.CharField(max_length=30, default = '')#모집인원
+    
+    최종학력 = models.CharField(max_length=200, default = '')
+    소속 = models.CharField(max_length=200, default = '')
+    신분 = models.CharField(max_length=200, default = '')
 
     create_date = models.DateTimeField(auto_now_add=True)  # 글이 만들어지면 자동 작성.
     modify_date = models.DateTimeField(null=True, blank=True)  # 수정할 때마다 갱신.(뷰에서 제어)
