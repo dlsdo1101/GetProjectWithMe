@@ -8,5 +8,7 @@ urlpatterns = [
     path('create/', views.create, name='create'),#글의 작성화면
     path('posting/<int:pk>/', views.posting, name='posting'),
     path('participate/', views.participate, name='participate'),
-    path('login/', views.login, name='login')
+    path('login/', views.login, name='login'),
+    path('mypage/', views.mypage, name='mypage'),
+    path('mypage_edit/', views.mypage_edit, name='mypage_edit')
 ]

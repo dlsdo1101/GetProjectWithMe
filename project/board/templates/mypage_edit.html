@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
+  <!-- Mirrored from rockstheme.com/rocks/aievari-live/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:23 GMT -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>회원가입</title>
+    <title>GetProjectWithMe</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -43,6 +43,48 @@
       src="https://kit.fontawesome.com/813a4a6269.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function rightChange(e) {
+        var ele = ["졸업"];
+        var mid = ["졸업", "재학", "중퇴"];
+        var hig = ["졸업", "재학", "중퇴"];
+        var col2 = ["졸업", "재학", "중퇴", "휴학", "수료"];
+        var col4 = ["졸업", "재학", "중퇴", "휴학", "수료"];
+        var gra = ["졸업", "재학", "중퇴", "휴학", "수료"];
+        var target = document.getElementById("right2");
+
+        if (e.value == "a") var d = ele;
+        else if (e.value == "b") var d = mid;
+        else if (e.value == "c") var d = hig;
+        else if (e.value == "d") var d = col2;
+        else if (e.value == "e") var d = col4;
+        else if (e.value == "f") var d = gra;
+
+        target.options.length = 0;
+
+        for (x in d) {
+          var opt = document.createElement("option");
+          opt.value = d[x];
+          opt.innerHTML = d[x];
+          target.appendChild(opt);
+        }
+      }
+
+      function gralook(e){
+        if(e.value == "d" || e.value == "e" || e.value == "f"){
+          document.getElementById("schname1").style.display = 'block';
+          document.getElementById("schfind").style.display = 'block';
+          document.getElementById("schname2").style.display = 'block';
+        } else{
+          document.getElementById("schname1").style.display = 'none';
+          document.getElementById("schfind").style.display = 'none';
+          document.getElementById("schname2").style.display = 'none';
+        }
+      }
+
+      
+
+    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -67,10 +109,16 @@
                 <div class="col-md-2 col-sm-3">
                   <div class="logo">
                     <!-- Brand -->
-                    <a class="navbar-brand page-scroll white-logo" href="{% url "main" %}">
+                    <a
+                      class="navbar-brand page-scroll white-logo"
+                      href="{% url "main" %}"
+                    >
                       <img src="/static/img/logo/GPWM_logo.png" alt="" />
                     </a>
-                    <a class="navbar-brand page-scroll black-logo" href="{% url "main" %}">
+                    <a
+                      class="navbar-brand page-scroll black-logo"
+                      href="{% url "main" %}"
+                    >
                       <img src="/static/img/logo/GPWM_logo.png" alt="" />
                     </a>
                   </div>
@@ -80,14 +128,16 @@
                   <div class="header-right-link usericonflex">
                     <!-- search option end -->
                     <div class="usericon">
-                      {% if user.is_authenticated %}
-                      <a class="pages iconcolor" href="{% url "mypage" %}"><i class="fa-solid fa-user"></i></a>
-                      {% else %}
-                      <a class="pages iconcolor" href="{% url "login" %}"><i class="fa-solid fa-user"></i></a>
-                      {% endif %}
+                      <a class="pages iconcolor" href="{% url "main" %}"
+                        ><i class="fa-solid fa-user"></i
+                      ></a>
                     </div>
                     <div class="loginm">
+                      {% if user.is_authenticated %}
+                      <a class="s-menu" href="{% url "logout" %}">{{ user.username }}(로그아웃)</a>
+                      {% else %}
                       <a class="s-menu" href="{% url "login" %}">로그인</a>
+                      {% endif %}
                     </div>
                   </div>
                   <!-- mainmenu start -->
@@ -108,7 +158,6 @@
                               <li><a href="blog-details.html">기타</a></li>
                             </ul>
                           </li>
-                          
                         </ul>
                       </div>
                     </div>
@@ -165,7 +214,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="breadcrumb text-center">
               <div class="section-headline white-headline">
-                <h3>회원가입</h3>
+                <h3>개인정보수정</h3>
                 <hr />
               </div>
             </div>
@@ -185,22 +234,23 @@
                   <form
                     id="contactForm"
                     method="POST"
-                    action="{% url 'signup'%}"
+                    action="http://rockstheme.com/rocks/aievari-live/contact.php"
                     class="log-form"
                   >
-                    {% csrf_token %}
-                    <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
-                      아이디
-                    </div>
-                    <div class="col-md-7 col-sm-12 col-xs-12">
-                      <input
-                        type="text"
-                        name="username"
-                        class="form-control"
-                        id="username"
-                        required
-                        data-error="Please enter your ID"
-                      />
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        아이디
+                      </div>
+                      <div class="col-md-7 col-sm-12 col-xs-12">
+                        <input
+                          type="text"
+                          id="id"
+                          class="signup-input midinput"
+                          required
+                          data-error="Please enter your ID"
+                          readonly
+                        />
+                      </div>
                     </div>
                     <div>
                       <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
@@ -209,9 +259,8 @@
                       <div class="col-md-7 col-sm-12 col-xs-12">
                         <input
                           type="password"
-                          name="password1"
-                          class="form-control"
-                          id="password1"
+                          id="password"
+                          class="signup-input"
                           required
                           data-error="Please enter your PASSWORD"
                         />
@@ -224,11 +273,24 @@
                       <div class="col-md-7 col-sm-12 col-xs-12">
                         <input
                           type="password"
-                          name="password2"
-                          class="form-control"
-                          id="password2"
+                          id="passwordcheck"
+                          class="signup-input"
                           required
                           data-error="Please enter your PASSWORD CHECK"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        이름
+                      </div>
+                      <div class="col-md-7 col-sm-12 col-xs-12">
+                        <input
+                          type="text"
+                          id="name"
+                          class="signup-input"
+                          required
+                          data-error="Please enter your NAME"
                         />
                       </div>
                     </div>
@@ -239,55 +301,133 @@
                       <div class="col-md-7 col-sm-12 col-xs-12">
                         <input
                           type="email"
-                          name="email"
-                          class="form-control"
                           id="email"
+                          class="signup-input"
                           required
                           data-error="Please enter your EMAIL"
                         />
-                      </div> 
+                      </div>
                     </div>
-                    <hr class="signuphr" />
                     <div>
                       <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
-                        이름
+                        휴대전화
                       </div>
                       <div class="col-md-7 col-sm-12 col-xs-12">
                         <input
                           type="text"
-                          name="last_name"
-                          id="last_name"
-                          class="form-control"
+                          id="phone"
+                          class="signup-input"
                           required
-                          data-error="Please enter your NAME"
+                          data-error="Please enter your PHONENUMBER"
                         />
                       </div>
                     </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div>
                       <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
-                        본인 이력
+                        성별
                       </div>
+                      <div class="col-md-2 col-sm-12 col-xs-12 gen">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="man"
+                          checked
+                        />남
+                        <input type="radio" name="gender" value="woman" />여
+                      </div>
+                    </div>
+                    <hr class="signuphr" />
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        최종학력
+                      </div>
+                      <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="col-md-3 col-sm-12 col-xs-12 marg">
+                          <select
+                            class="signup-input"
+                            id="left1"
+                            name="left1"
+                            onchange="rightChange(this); gralook(this);"
+                          >
+                            <option>선택</option>
+                            <option value="a">초등학교</option>
+                            <option value="b">중학교</option>
+                            <option value="c">고등학교</option>
+                            <option value="d">대학(2,3년제)</option>
+                            <option value="e">대학(4년제)</option>
+                            <option value="f">대학원</option>
+                          </select>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                          <select
+                            class="signup-input"
+                            id="right2"
+                            name="right2"
+                          >
+                            <option>선택</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-7 col-sm-12 col-xs-12" id="schname1">
+                          <input
+                            type="text"
+                            id="school"
+                            class="signup-input midinput"
+                            placeholder="학교명"
+                            required
+                            data-error="Please enter your name"
+                          />
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12" id="schfind">
+                          <button id="schoolfind" class="same-check shadow">
+                            학교찾기
+                          </button>
+                        </div>
+                      
+                        <div class="col-md-6 col-sm-12 col-xs-12" id="schname2">
+                          <input
+                            type="text"
+                            id="major"
+                            class="signup-input midinput"
+                            placeholder="학과명"
+                            required
+                            data-error="Please enter your name"
+                          />
+                        </div>
+                    </div>
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">신분</div>
+                      <div class="col-md-2 col-sm-12 col-xs-12">
+                          <select class="signup-input midinput">
+                              <option value="1" selected>선택</option>
+                              <option value="2">학생</option>
+                              <option value="3">취준생</option>
+                              <option value="4">직장인</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt"></div>
                       <div class="col-md-9 col-sm-12 col-xs-12">
                           <textarea
                             type="text"
-                            id="first_name"
+                            id="career"
                             class="signup-input"
-                            placeholder="본인의 간단 소개와 사용가능 언어, 프로젝트 이력을 쓰시오."
-                            name="first_name"
+                            placeholder="사용가능 언어, 프로젝트 이력을 쓰시오."
                             required
-                            data-error="Please enter your record"
-                          ></textarea> 
+                            data-error="Please enter your name"
+                          ></textarea>
                       </div>
                     </div>
+                    
+
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <button type="submit" id="submit" class="login-btn">
                         가입하기
                       </button>
-                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div id="msgSubmit" class="h3 hidden"></div>
                       <div class="clearfix"></div>
                     </div>
-                  
-                    
                   </form>
                 </div>
               </div>
@@ -296,10 +436,8 @@
         </div>
       </div>
     </div>
-    <!-- all js here -->
     <!-- Start Footer Area -->
     <footer class="footer1">
-      
       <div class="footer-area-bottom">
         <div class="container">
           <div class="row">
@@ -345,10 +483,11 @@
     <script src="/static/js/jquery.meanmenu.js"></script>
     <!-- Form validator js -->
     <script src="/static/js/form-validator.min.js"></script>
-
+    <!-- plugins js -->
+    <script src="/static/js/plugins.js"></script>
     <!-- main js -->
     <script src="/static/js/main.js"></script>
   </body>
 
-  <!-- Mirrored from rockstheme.com/rocks/aievari-live/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:27:42 GMT -->
+  <!-- Mirrored from rockstheme.com/rocks/aievari-live/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:28:23 GMT -->
 </html>

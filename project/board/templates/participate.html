@@ -91,9 +91,11 @@
                   <div class="header-right-link usericonflex">
                     <!-- search option end -->
                     <div class="usericon">
-                      <a class="pages iconcolor" href="mypage.html"
-                        ><i class="fa-solid fa-user"></i
-                      ></a>
+                      {% if user.is_authenticated %}
+                      <a class="pages iconcolor" href="{% url "mypage" %}"><i class="fa-solid fa-user"></i></a>
+                      {% else %}
+                      <a class="pages iconcolor" href="{% url "login" %}"><i class="fa-solid fa-user"></i></a>
+                      {% endif %}
                     </div>
                     <div class="loginm">
                       {% if user.is_authenticated %}

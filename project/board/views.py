@@ -36,6 +36,12 @@ def posting(request, pk):
 
 def participate(request):
     return render(request, 'participate.html')
+
+def mypage(request):
+    return render(request, 'mypage.html')
+
+def mypage_edit(request):
+    return render(request, 'mypage_edit.html')
     
 
     

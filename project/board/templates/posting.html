@@ -135,9 +135,11 @@
             <div class="col-md-12">
               <div class="mobile-menu">
                 <div class="logo">
-                  <a href="{% url "main" %}"
-                    ><img src="/static/img/logo/logo.png" alt=""
-                  /></a>
+                  {% if user.is_authenticated %}
+                      <a class="pages iconcolor" href="{% url "mypage" %}"><i class="fa-solid fa-user"></i></a>
+                      {% else %}
+                      <a class="pages iconcolor" href="{% url "login" %}"><i class="fa-solid fa-user"></i></a>
+                      {% endif %}
                 </div>
                 <nav id="dropdown">
                   <ul>
