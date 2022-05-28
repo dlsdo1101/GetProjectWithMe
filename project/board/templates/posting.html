@@ -244,7 +244,7 @@
                     </tr>
                     <tr>
                       <td>모집인원</td>
-                      <td class="tdright">{{post.team}}</td>
+                      <td class="tdright">{{post.like_count}}/{{post.team}}</td>
                     </tr>
                     <tr>
                       <td>경력</td>
@@ -269,14 +269,21 @@
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 disf">
-          <a id="signup" class="login-btn proenroll pad" href="{% url "participate" %}"
-            >참여신청</a
+          {% if user in post.like.all %}
+          <a id="signup" class="login-btn proenroll pad" href="{% url 'likes' post.id %}"
+            >참여취소</a
           >
+          {% else %}
+          <a id="signup" class="login-btn proenroll pad" href="{% url 'likes' post.id %}"
+            >참여하기</a
+          >
+          {% endif %}
           <div id="msgSubmit" class="h3 text-center hidden"></div>
           <div class="clearfix"></div>
         </div>
       </div>
     </div>
+
 
     <!-- all js here -->
     <!-- Start Footer Area -->

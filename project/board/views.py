@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Writing  # 모델을 불러온다.
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -73,3 +73,17 @@ def login(request):
             })
     else:
         return render(request, "login.html")
+    
+    
+    
+def likes(request, blog_id):
+    like_b = get_object_or_404(Writing, id=blog_id)
+    if request.user in like_b.like.all():
+        like_b.like.remove(request.user)
+        like_b.like_count -= 1
+        like_b.save()
+    else:
+        like_b.like.add(request.user)
+        like_b.like_count += 1
+        like_b.save()
+    return redirect('/board/posting/' + str(blog_id))

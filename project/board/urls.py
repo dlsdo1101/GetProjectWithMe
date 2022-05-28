@@ -10,5 +10,6 @@ urlpatterns = [
     path('participate/', views.participate, name='participate'),
     path('login/', views.login, name='login'),
     path('mypage/', views.mypage, name='mypage'),
-    path('mypage_edit/', views.mypage_edit, name='mypage_edit')
+    path('mypage_edit/', views.mypage_edit, name='mypage_edit'),
+    path('like/<int:blog_id>/', views.likes, name="likes"),
 ]

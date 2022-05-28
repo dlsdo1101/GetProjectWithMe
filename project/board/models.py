@@ -43,6 +43,12 @@ class Writing(models.Model):
     최종학력 = models.CharField(max_length=200, default = '')
     소속 = models.CharField(max_length=200, default = '')
     신분 = models.CharField(max_length=200, choices=IDENTITY_CHOICES, default = '')
+    
+    
+    like = models.ManyToManyField(User, related_name='likes',blank=True)
+    like_count = models.PositiveIntegerField(default=0) #0또는 양수만 받는 필드
+    
+    
 
     create_date = models.DateTimeField(auto_now_add=True)  # 글이 만들어지면 자동 작성.
     modify_date = models.DateTimeField(null=True, blank=True)  # 수정할 때마다 갱신.(뷰에서 제어)
