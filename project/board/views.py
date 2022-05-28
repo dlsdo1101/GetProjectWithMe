@@ -17,6 +17,15 @@ def create(request):
     from django.utils import timezone  # 시간입력용
     if request.method == 'POST':  # 포스트로 요청이 들어온다면... 글을 올리는 기능.
         form = WritingForm(request.POST)  # 폼을 불러와 내용입력을 받는다.
+        ['title', 'technical_field', 'topic_area', 'content', 'team', '최종학력', '소속', '신분']
+        title = form.data['title']
+        technical_field = form.data['technical_field']
+        topic_area = form.data['topic_area']
+        content = form.data['content']
+        team = form.data['team']
+        최종학력 = form.data['최종학력']
+        소속 = form.data['소속']
+        신분 = form.data['신분']
         if form.is_valid():  # 폼에서 에러처리. 문제가 없으면 다음으로 진행.
             writing = form.save(commit=False)  # commit=False는 저장을 잠시 미루기 위함.(입력받는 값이 아닌, view에서 다른 값을 지정하기 위해)
             writing.author = request.user  # 추가한 속성 author 적용

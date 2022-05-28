@@ -22,6 +22,13 @@ class Writing(models.Model):
        ('엔터테인먼트', '엔터테인먼트'), 
        ('기타', '기타')
     }
+
+    IDENTITY_CHOICES = {
+       ('학생', '학생'),
+       ('취준생', '취준생'), 
+       ('직장인', '직장인'),
+       ('기타','기타')
+    }
     
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=False)  # 유저모델과 연결!
     
@@ -35,7 +42,7 @@ class Writing(models.Model):
     
     최종학력 = models.CharField(max_length=200, default = '')
     소속 = models.CharField(max_length=200, default = '')
-    신분 = models.CharField(max_length=200, default = '')
+    신분 = models.CharField(max_length=200, choices=IDENTITY_CHOICES, default = '')
 
     create_date = models.DateTimeField(auto_now_add=True)  # 글이 만들어지면 자동 작성.
     modify_date = models.DateTimeField(null=True, blank=True)  # 수정할 때마다 갱신.(뷰에서 제어)
