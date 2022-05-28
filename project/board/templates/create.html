@@ -43,11 +43,6 @@
       src="https://kit.fontawesome.com/813a4a6269.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      function enroll() {
-        alert("프로젝트가 등록되었습니다.");
-      }
-    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -74,13 +69,13 @@
                     <!-- Brand -->
                     <a
                       class="navbar-brand page-scroll white-logo"
-                      href="main.html"
+                      href="{% url "main" %}"
                     >
                       <img src="/static/img/logo/GPWM_logo.png" alt="" />
                     </a>
                     <a
                       class="navbar-brand page-scroll black-logo"
-                      href="main.html"
+                      href="{% url "main" %}"
                     >
                       <img src="/static/img/logo/GPWM_logo.png" alt="" />
                     </a>
@@ -96,7 +91,11 @@
                       ></a>
                     </div>
                     <div class="loginm">
-                      <a class="s-menu" href="login.html">로그인</a>
+                        {% if user.is_authenticated %}
+                        <a class="s-menu" href="{% url "logout" %}">{{ user.username }}(로그아웃)</a>
+                        {% else %}
+                        <a class="s-menu" href="{% url "login" %}">로그인</a>
+                        {% endif %}
                     </div>
                   </div>
                   <!-- mainmenu start -->
@@ -105,10 +104,10 @@
                       <div class="main-menu">
                         <ul class="nav navbar-nav navbar-right">
                           <li>
-                            <a class="pages" href="introduce.html">소개</a>
+                            <a class="pages" href="{% url "introduce" %}">소개</a>
                           </li>
                           <li>
-                            <a href="join.html">참여하기</a>
+                            <a href="{% url "list" %}">참여하기</a>
                             <ul class="sub-menu">
                               <li><a href="blog.html">웹</a></li>
                               <li><a href="blog-sidebar.html">앱</a></li>
@@ -136,9 +135,11 @@
             <div class="col-md-12">
               <div class="mobile-menu">
                 <div class="logo">
-                  <a href="main.html"
-                    ><img src="/static/img/logo/logo.png" alt=""
-                  /></a>
+                  {% if user.is_authenticated %}
+                      <a class="pages iconcolor" href="{% url "mypage" %}"><i class="fa-solid fa-user"></i></a>
+                      {% else %}
+                      <a class="pages iconcolor" href="{% url "login" %}"><i class="fa-solid fa-user"></i></a>
+                      {% endif %}
                 </div>
                 <nav id="dropdown">
                   <ul>
@@ -310,10 +311,10 @@
                   <span>GetProjectWithMe</span>
                   <span><a href="#" class="colorblue">이용약관</a></span>
                   <span
-                    ><a href="introduce.html" class="colorblue">소개</a></span
+                    ><a href="{% url "introduce" %}" class="colorblue">소개</a></span
                   >
                   <span
-                    ><a href="join.html" class="colorblue">참여하기</a></span
+                    ><a href="{% url "list" %}" class="colorblue">참여하기</a></span
                   >
                 </p>
                 <p class="txtsiz">
