@@ -5,7 +5,7 @@ from .models import Writing  # 폼을 적용할 모델을 불러온다.
 class WritingForm(forms.ModelForm):
     class Meta:
         model = Writing  # 사용할 모델
-        fields = ['title', 'technical_field', 'topic_area', 'content', 'team', '최종학력', '소속', '신분']  # 폼으로 입력할 필드를 입력해준다.
+        fields = ['title', 'technical_field', 'topic_area', 'content', 'team', '최종학력', '신분']  # 폼으로 입력할 필드를 입력해준다.
         widgets = {
             'title': forms.TextInput(
                 attrs={
@@ -29,11 +29,6 @@ class WritingForm(forms.ModelForm):
                 attrs={
                     'class': 'signup-input',
                     'placeholder' : '예) 평택대 4학년 융합소프트웨어학과 재학중/휴학/졸업'
-                }
-            ),
-            '소속': forms.TextInput(
-                attrs={
-                    'class': 'signup-input'
                 }
             ),
             

@@ -41,7 +41,6 @@ class Writing(models.Model):
     team = models.CharField(max_length=30, default = '')#모집인원
     
     최종학력 = models.CharField(max_length=200, default = '')
-    소속 = models.CharField(max_length=200, default = '')
     신분 = models.CharField(max_length=200, choices=IDENTITY_CHOICES, default = '')
     
     
