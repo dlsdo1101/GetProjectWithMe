@@ -192,27 +192,16 @@
                   <div class="profile">
                     <div class="col-md-4 col-sm-12 col-xs-12">
                       <img
-                        src="/static/img/mypage/pro_girl.png"
+                        src="/static/img/mypage/mypage_img.png"
                         class="proimg"
                         alt=" "
                       />
                     </div>
                     <div class="col-md-7 col-sm-12 col-xs-12 proright">
-                      <h4>{{user.last_name}}</h4>
-                      <h4></h4><span>{{user.email}}</span></h4>
-                      <h6 class="prorightmid">-최종학력 : 대학(4년제) 재학</h6>
-                      <h6 class="prorightmid">
-                        -소속 : 평택대학교 융합소프트웨어학과
-                      </h6>
-                      <h6 class="prorightmid">-신분 : 학생</h6>
-                      <h6 class="prorightmid">-휴대전화 : 010-1234-1234</h6>
-                      <button
-                        id="check"
-                        class="proedit shadow"
-                        onclick="location.href = '/board/mypage_edit'"
-                      >
-                        개인정보수정
-                      </button>
+                      <h1></h1>
+                      <h3>{{user.last_name}}</h3>
+                      <h4 class="prorightmid">-ID : {{user.username}}</h4>
+                      <h4 class="prorightmid">-EMAIL : {{user.email}}</h4>
                     </div>
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu">
