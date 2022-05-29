@@ -86,7 +86,7 @@
                   <div class="header-right-link usericonflex">
                     <!-- search option end -->
                     <div class="usericon">
-                      <a class="pages iconcolor" href="mypage.html"
+                      <a class="pages iconcolor" href="{% url "mypage" %}"
                         ><i class="fa-solid fa-user"></i
                       ></a>
                     </div>
@@ -206,13 +206,14 @@
                 <div class="deposite-table">
                   <table>
                     <tr>
+                      <td>프로젝트 제목</td>
+                      <td class="tdright">{{post.title}}</td>
+                    </tr>
+                    <tr>
                         <td>연락처</td>
                         <td class="tdright">{{post.author.email}}</td>
                       </tr>
-                    <tr>
-                      <td>프로젝트기간</td>
-                      <td class="tdright">2022-04-05~2022-10-10</td>
-                    </tr>
+                  
                     <tr>
                       <td>기술분야</td>
                       <td class="tdright">
@@ -223,25 +224,14 @@
                       <td>주제영역</td>
                       <td class="tdright">{{post.topic_area}}</td>
                     </tr>
+                    
                     <tr>
-                      <td>프로젝트개요</td>
-                      <td class="tdright">{{post.title}}</td>
-                    </tr>
-                    <tr>
-                      <td>프로젝트개요서</td>
+                      <td>프로젝트 개요</td>
                       <td class="tdright profile_pdf">
-                        <iframe
-                          src="/static/img/project/개요서.pdf"
-                          style="width: 100%; height: 100%"
-                        ></iframe>
+                        {{post.content}}
                       </td>
                     </tr>
-                    <tr>
-                      <td>상태</td>
-                      <td class="tdright">
-                        <h6 class="recruit procate">모집중</h6>
-                      </td>
-                    </tr>
+                    
                     <tr>
                       <td>모집인원</td>
                       <td class="tdright">{{post.like_count}}/{{post.team}}</td>
