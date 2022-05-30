@@ -2808,7 +2808,7 @@ span.users {
 
 .tabbox label {
   display: inline-block;
-  width: 33.33%;
+  width: 50%;
   height: 40px;
   line-height: 40px;
   font-size: 15px;
@@ -2835,11 +2835,6 @@ span.users {
 }
 
 #tab2:checked~#tab-content2 {
-  display: block;
-  background-color: #fff;
-}
-
-#tab3:checked~#tab-content3 {
   display: block;
   background-color: #fff;
 }

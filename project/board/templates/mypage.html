@@ -235,16 +235,18 @@
                       id="tab-content2"
                       class="col-md-12 col-sm-12 col-xs-12 tab-content"
                     >
-                      <div onClick="location.href={% url 'list' %}">
+                      <a href ="{% url "list" %}">
                         {% for writing in writing_list %}
                         {% if user == writing.author %}
                           <div class="col-md-6 col-sm-12 col-xs-12 postcon">
                             {{writing.title}}
                           </div>
-                          
+                          <div class="col-md-6 col-sm-12 col-xs-12 postcon">
+                            {{ writing.create_date }}
+                          </div>
                         {% endif%}
                         {% endfor %}
-                      </div>
+                        </a>
                     </div>
                   </div>
                 </div>
