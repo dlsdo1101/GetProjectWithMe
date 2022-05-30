@@ -46,7 +46,10 @@ def participate(request):
     return render(request, 'participate.html')
 
 def mypage(request):
-    return render(request, 'mypage.html')
+    writing_list = Writing.objects.all()
+    context = {'writing_list':writing_list,  # writing_list라는 키 안에 writing_list를 담는다.
+               }
+    return render(request, 'mypage.html',context)
 
 def mypage_edit(request):
     return render(request, 'mypage_edit.html')

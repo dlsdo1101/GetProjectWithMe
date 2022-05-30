@@ -202,11 +202,18 @@
                       <h4>{{user.last_name}}</h4>
                       <h5 class="prorightmid">-ID : {{user.username}}</h5>
                       <h5 class="prorightmid">-EMAIL : {{user.email}}</h5>
+
+
+                      
+
+
                     </div>
                   </div>
                   <div class="col-md-12 col-sm-12 col-xs-12 tabbox tabmenu">
                     <input id="tab1" name="tab-menu" type="radio" checked />
                     <label for="tab1">나의 이력</label>
+                    <input id="tab2" name="tab-menu" type="radio" />
+                    <label for="tab2">프로젝트 게시 내역</label>
                 
                     <div
                       id="tab-content1"
@@ -224,7 +231,21 @@
                         ></textarea>
                       </div>
                     </div>
-                    
+                    <div
+                      id="tab-content2"
+                      class="col-md-12 col-sm-12 col-xs-12 tab-content"
+                    >
+                      <div onClick="location.href={% url 'list' %}">
+                        {% for writing in writing_list %}
+                        {% if user == writing.author %}
+                          <div class="col-md-6 col-sm-12 col-xs-12 postcon">
+                            {{writing.title}}
+                          </div>
+                          
+                        {% endif%}
+                        {% endfor %}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
