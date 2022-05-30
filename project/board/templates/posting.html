@@ -109,11 +109,11 @@
                           <li>
                             <a href="{% url "list" %}">참여하기</a>
                             <ul class="sub-menu">
-                              <li><a href="blog.html">웹</a></li>
-                              <li><a href="blog-sidebar.html">앱</a></li>
-                              <li><a href="blog-details.html">게임</a></li>
-                              <li><a href="blog-details.html">인공지능</a></li>
-                              <li><a href="blog-details.html">기타</a></li>
+                              <li><a href="{% url "list" %}">웹</a></li>
+                              <li><a href="{% url "list" %}">앱</a></li>
+                              <li><a href="{% url "list" %}">게임</a></li>
+                              <li><a href="{% url "list" %}">인공지능</a></li>
+                              <li><a href="{% url "list" %}">기타</a></li>
                             </ul>
                           </li>
                         </ul>
@@ -282,7 +282,13 @@
                     {% for i in post.like.all%}
                     <tr>
                       <td>참여자 정보</td>
-                      <td class="tdright">{{ i.last_name }} / {{ i.email }} / {{ i.first_name }}</td> 
+                      
+                      <td class="tdright profile_pdf">
+                        이름 : {{ i.last_name }} 
+                        <br>
+                        이메일 :  {{ i.email }} 
+                        <br>
+                        이력 : {{ i.first_name }}</td> 
                     </tr>
                     {% endfor %}
                   </table>
