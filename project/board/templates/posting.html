@@ -43,6 +43,16 @@
       src="https://kit.fontawesome.com/813a4a6269.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function enroll() {
+        alert("참여하기가 완료되었습니다.");
+      }
+    </script>
+    <script>
+      function notenroll() {
+        alert("참여취소가 완료되었습니다.");
+      }
+    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -257,11 +267,11 @@
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 disf">
           {% if user in post.like.all %}
-          <a id="signup" class="login-btn proenroll pad" href="{% url 'likes' post.id %}"
+          <a id="signup" class="login-btn proenroll pad" onclick="notenroll()" href="{% url 'likes' post.id %}"
             >참여취소</a
           >
           {% else %}
-          <a id="signup" class="login-btn proenroll pad" href="{% url 'likes' post.id %}"
+          <a id="signup" class="login-btn proenroll pad" onclick="enroll()" href="{% url 'likes' post.id %}"
             >참여하기</a
           >
           {% endif %}
@@ -322,6 +332,8 @@
                 <p class="txtsiz">
                   Copyright © 2020
                   <a href="#">Aievari</a> All Rights Reserved
+                  <br>
+                  이용문의 - xxwj104@naver.com
                 </p>
               </div>
             </div>
