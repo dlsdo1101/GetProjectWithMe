@@ -180,12 +180,12 @@
       <div class="breadcumb-overlay backcolorwhite"></div>
       <div class="container catecenter2">
         <div class="col-md-12 col-sm-12 col-xs-12 catecenter">
-          <h6 class="h6mar">전체</h6>
-          <h6 class="h6mar">웹</h6>
-          <h6 class="h6mar">앱</h6>
-          <h6 class="h6mar">게임</h6>
-          <h6 class="h6mar">인공지능</h6>
-          <h6 class="h6mar">기타</h6>
+          <h6 class="h6mar active" data-filter="all">전체</h6>
+          <h6 class="h6mar" data-filter="web">웹</h6>
+          <h6 class="h6mar" data-filter="app">앱</h6>
+          <h6 class="h6mar" data-filter="game">게임</h6>
+          <h6 class="h6mar" data-filter="ai">인공지능</h6>
+          <h6 class="h6mar" data-filter="etc">기타</h6>
         </div>
       </div>
     </div>
@@ -195,7 +195,7 @@
         <div class="row">
           <div class="support-all">
             <div
-              class="support-services wow"
+              class="support-services wow web"
               onclick="location.href='project.html'"
             >
               <a class="support-images" href="project.html"
@@ -211,7 +211,7 @@
               <p class="num cardbt">모집인원 2/5</p>
             </div>
             <div
-              class="support-services wow"
+              class="support-services wow app"
               onclick="location.href='project.html'"
             >
               <a class="support-images" href="project.html"
@@ -227,7 +227,7 @@
               <p class="num cardbt">모집인원 2/5</p>
             </div>
             <div
-              class="support-services wow"
+              class="support-services wow game"
               onclick="location.href='project.html'"
             >
               <a class="support-images" href="project.html"
@@ -243,7 +243,7 @@
               <p class="num cardbt">모집인원 5/5</p>
             </div>
             <div
-              class="support-services wow"
+              class="support-services wow ai"
               onclick="location.href='project.html'"
             >
               <a class="support-images" href="project.html"
@@ -259,7 +259,7 @@
               <p class="num cardbt">모집인원 5/5</p>
             </div>
             <div
-              class="support-services wow"
+              class="support-services wow etc"
               onclick="location.href='project.html'"
             >
               <a class="support-images" href="project.html"
@@ -316,6 +316,37 @@
       </div>
     </footer>
     <!-- End Footer area -->
+
+    <script>
+      const cate = document.querySelector('.catecenter ')
+      const post = document.querySelectorAll('.support-services')
+
+        cate.addEventListener("click", (event) =>{
+          if(event.target.classList.contains("h6mar")){
+
+            cate.querySelector(".active").classList.remove("active");
+
+            event.target.classList.add("active");
+
+            const filterValue = event.target.getAttribute("data-filter");
+            console.log(filterValue) 
+
+            post.forEach((item) =>{
+
+              if(item.classList.contains(filterValue) || filterValue === 'all'){
+                console.log(item.classList.contains(filterValue))
+                item.classList.remove("hide");
+                item.classList.add("show");
+              }
+
+              else{
+                item.classList.remove("show");
+                item.classList.add("hide");
+              }
+            });
+          }
+        });
+    </script>
 
     <!-- all js here -->
 
