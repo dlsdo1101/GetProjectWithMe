@@ -186,12 +186,12 @@
       <div class="breadcumb-overlay backcolorwhite"></div>
       <div class="container catecenter2">
         <div class="col-md-12 col-sm-12 col-xs-12 catecenter">
-          <h6 class="h6mar">전체</h6>
-          <h6 class="h6mar">웹</h6>
-          <h6 class="h6mar">앱</h6>
-          <h6 class="h6mar">게임</h6>
-          <h6 class="h6mar">인공지능</h6>
-          <h6 class="h6mar">기타</h6>
+          <h6 class="h6mar active" data-filter="all">전체</h6>
+          <h6 class="h6mar" data-filter="web">웹</h6>
+          <h6 class="h6mar" data-filter="app">앱</h6>
+          <h6 class="h6mar" data-filter="game">게임</h6>
+          <h6 class="h6mar" data-filter="ai">인공지능</h6>
+          <h6 class="h6mar" data-filter="etc">기타</h6>
         </div>
       </div>
     </div>
@@ -203,9 +203,9 @@
           <table class="table">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">분야</th>
-                  <th scope="col">제목</th>
-                  <th scope="col">작성자</th>
+                  <th scope="col" class="tableth_1">분야</th>
+                  <th scope="col" class="tableth_2">제목</th>
+                  <th scope="col" class="tableth_1">작성자</th>
                   <th scope="col">작성일</th>
                 </tr>
               </thead>
@@ -213,12 +213,15 @@
               <tbody>
                 {% for writing in writing_list %}
                 {% if user.is_authenticated %}
-                <tr onclick="location.href='/board/posting/{{ writing.id }}/'">
-                  <td>{{ writing.technical_field }}</td>
+                <tr class="posttable" onclick="location.href='/board/posting/{{ writing.id }}/'">
+                  <td class="tech">{{ writing.technical_field }}</td>
                   <td>{{ writing.title }}</td>
                   <td>{{ writing.author }}</td>
                   <td>{{ writing.create_date }}</td>
+                  
                 </tr>
+                
+                
                 {% endif %}
                 <tr onclick="location.href='/loginapp/login/'"></tr>
                 {% endfor %}
@@ -267,6 +270,51 @@
       </div>
     </footer>
     <!-- End Footer area -->
+    <script>
+      
+      const cate = document.querySelector('.catecenter ')
+      const post = document.querySelectorAll('.posttable')
+      let tech = document.getElementsByClassName('tech')
+
+      for(let i = 0; i < tech.length; i++){
+        if(tech[i].textContent==="웹"){
+          tech[i].classList.add("web");
+        } else if(tech[i].textContent==="앱") {
+          tech[i].classList.add("app");
+        } else if(tech[i].textContent==="게임") {
+          tech[i].classList.add("game");
+        } else if(tech[i].textContent==="인공지능") {
+          tech[i].classList.add("ai");
+        } else{
+          tech[i].classList.add("etc");
+        }
+      }
+
+
+        cate.addEventListener("click", (event) =>{
+          if(event.target.classList.contains("h6mar")){
+
+            cate.querySelector(".active").classList.remove("active");
+
+            event.target.classList.add("active");
+
+            const filterValue = event.target.getAttribute("data-filter");
+      
+            post.forEach((item) =>{
+              const techclass = item.getElementsByTagName('td')[0]
+              if(techclass.classList.contains(filterValue) || filterValue === 'all'){
+                item.classList.remove("hide");
+                techclass.classList.add("listshow");
+              }
+
+              else{
+                item.classList.remove("listshow");
+                item.classList.add("hide");
+              }
+            });
+          }
+        });
+    </script>
 
     <!-- all js here -->
 
