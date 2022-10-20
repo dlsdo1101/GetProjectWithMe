@@ -189,19 +189,24 @@
                     class="log-form"
                   >
                     {% csrf_token %}
-                    <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
-                      아이디
+                    <div>
+                      <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+                        아이디
+                      </div>
+                      <div class="col-md-7 col-sm-12 col-xs-12">
+                        <input
+                          type="text"
+                          name="username"
+                          class="form-control"
+                          id="username"
+                          required
+                          data-error="Please enter your ID"
+                        />
+                      </div>
+                        
                     </div>
-                    <div class="col-md-7 col-sm-12 col-xs-12">
-                      <input
-                        type="text"
-                        name="username"
-                        class="form-control"
-                        id="username"
-                        required
-                        data-error="Please enter your ID"
-                      />
-                    </div>
+
+
                     <div>
                       <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
                         비밀번호
