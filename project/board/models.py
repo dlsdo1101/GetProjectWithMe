@@ -56,3 +56,4 @@ class Writing(models.Model):
     
     def __str__(self):
         return self.title  # 관리자페이지에서 어떻게 보여질 것인가.
+

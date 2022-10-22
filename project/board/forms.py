@@ -1,6 +1,7 @@
 from django import forms
 from matplotlib import widgets
 from .models import Writing  # 폼을 적용할 모델을 불러온다.
+from django_summernote.widgets import SummernoteWidget
 
 class WritingForm(forms.ModelForm):
     class Meta:
@@ -14,10 +15,8 @@ class WritingForm(forms.ModelForm):
                 }
             ),
             
-            'content': forms.TextInput(
-                attrs={
-                    'class': 'signup-input'
-                }
+            'content': SummernoteWidget(
+                #attrs={'summernote':{'width':'140%','height':'500px'}}
             ),
             'team': forms.TextInput(
                 attrs={

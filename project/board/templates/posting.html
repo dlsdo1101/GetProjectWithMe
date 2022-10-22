@@ -235,12 +235,7 @@
                       <td class="tdright">{{post.topic_area}}</td>
                     </tr>
                     
-                    <tr>
-                      <td>프로젝트 개요</td>
-                      <td class="tdright profile_pdf">
-                        {{post.content}}
-                      </td>
-                    </tr>
+                   
                     
                     <tr>
                       <td>모집인원</td>
@@ -265,6 +260,14 @@
             </div>
           </div>
         </div>
+        
+        <div class="col-md-3 col-sm-12 col-xs-12 lefttxt">
+          프로젝트 개요 소개
+        </div>
+        <hr class="signuphr" />
+        <tr>{{post.content|safe}}</tr> 
+
+
         <div class="col-md-12 col-sm-12 col-xs-12 disf">
           {% if user in post.like.all %}
           <a id="signup" class="login-btn proenroll pad" onclick="notenroll()" href="{% url 'likes' post.id %}"
