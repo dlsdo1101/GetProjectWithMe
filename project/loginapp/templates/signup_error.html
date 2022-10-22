@@ -222,6 +222,7 @@
                           id="password1"
                           required
                           data-error="Please enter your PASSWORD"
+                          autocomplete="on"
                         />
                       </div>
                     </div>
@@ -237,7 +238,10 @@
                           id="password2"
                           required
                           data-error="Please enter your PASSWORD CHECK"
+                          autocomplete="on"
+                          onkeyup="passwordcheck()"
                         />
+                        <p class="passwordchecktxt">비밀번호가 일치하지않습니다.</p>
                       </div>
                     </div>
                     <div>
@@ -288,7 +292,7 @@
                       </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                      <button type="submit" id="submit" class="login-btn">
+                      <button type="submit" id="submit" class="login-btn" onclick="signupcheck()">
                         가입하기
                       </button>
                       <div id="msgSubmit" class="h3 text-center hidden"></div>
