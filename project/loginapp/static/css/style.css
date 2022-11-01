@@ -2749,6 +2749,7 @@ span.users {
   border: 0;
   border-top: 1.5px solid #888888;
   width: 100%;
+  
 }
 
 #career {
@@ -3187,14 +3188,14 @@ span.users {
   padding-top: 17px;
   padding-left: 110px;
   margin: 0;
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .proname {
   padding-top: 10px;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .prostart {
