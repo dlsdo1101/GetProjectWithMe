@@ -2685,12 +2685,20 @@ span.users {
   width: 65%;
 }
 
+.backcolor {
+  background-color: #2980b9;
+}
+
 .lefttxt {
   line-height: 35px;
-  text-align: left;
+  text-align: center;
   padding-left: 20px;
-  font-weight: 900;
-  font-size: large;
+  font-weight: 800;
+  font-size: 23px;
+  margin-bottom: 15px;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .login-form .signup-input {
@@ -2740,7 +2748,7 @@ span.users {
   margin-bottom: 20px;
   border: 0;
   border-top: 1.5px solid #888888;
-  width: 95%;
+  width: 100%;
 }
 
 #career {
@@ -2766,6 +2774,11 @@ span.users {
   background-color: #fafafa;
   padding: 25px;
   height: 270px;
+}
+
+.procontain {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .proright {
@@ -3066,7 +3079,10 @@ span.users {
 
 .posttable.hide {
   display: none;
+}
 
+.cur {
+  cursor: pointer;
 }
 
 .cardmar {
@@ -3171,10 +3187,14 @@ span.users {
   padding-top: 17px;
   padding-left: 110px;
   margin: 0;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .proname {
   padding-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .prostart {

@@ -213,7 +213,7 @@
               <tbody>
                 {% for writing in writing_list %}
                 {% if user.is_authenticated %}
-                <tr class="posttable" onclick="location.href='/board/posting/{{ writing.id }}/'">
+                <tr class="posttable cur" onclick="location.href='/board/posting/{{ writing.id }}/'">
                   <td class="tech">{{ writing.technical_field }}</td>
                   <td>{{ writing.title }}</td>
                   <td>{{ writing.author }}</td>
