@@ -8,7 +8,6 @@ http://gpwm.pythonanywhere.com/
 
 프로젝트 인원 모집 플랫폼
 
------------------------ 
 
 ## 2. 개요 
 
@@ -36,7 +35,6 @@ http://gpwm.pythonanywhere.com/
 
 + 간단 소개 : 전반적인 웹의 기본 소양이 되는 게시판을 이용한 프로젝트 인원 모집 플랫폼
 
------------------------
 
 ## 3. 요구사항 분석 
 
@@ -94,7 +92,6 @@ http://gpwm.pythonanywhere.com/
 + 나의 이력 나타내기
 + 작성한 프로젝트 게시 내역 나타내기
 
-----------------------
 
 ## 4. 홈페이지 디자인
 
@@ -102,23 +99,37 @@ http://gpwm.pythonanywhere.com/
 ![1](https://user-images.githubusercontent.com/85046063/199395382-e0071ae5-9907-42f5-91e2-53a08dd56073.png)
 ![2](https://user-images.githubusercontent.com/85046063/199395417-3a9f88f9-80db-4983-9b84-a2b748468780.png)
 
+----------------------- 
+
 ### 프로젝트 게시글 목록
 ![3](https://user-images.githubusercontent.com/85046063/199395435-3a2984f7-2ecf-43f7-9ace-1063d679066b.png)
+
+----------------------- 
 
 ### 프로젝트 내용
 ![6](https://user-images.githubusercontent.com/85046063/199395460-98c73acb-5776-42cd-9e55-bc1331896d03.png)
 
+----------------------- 
+
 ### 프로젝트 작성
 ![4](https://user-images.githubusercontent.com/85046063/199395458-f6ce5f18-5933-44ea-9369-a2c8e3dd7b26.png)
+
+----------------------- 
 
 ### 참여하기
 ![5](https://user-images.githubusercontent.com/85046063/199395459-f92be6f1-50b4-457c-b480-9db36d911ad6.png)
 
+----------------------- 
+
 ### 로그인
 ![7](https://user-images.githubusercontent.com/85046063/199395463-3aa1e8ac-efe7-4ecd-ac83-f27047afa58a.png)
 
+----------------------- 
+
 ### 회원가입
 ![8](https://user-images.githubusercontent.com/85046063/199395466-04ae61b5-d61e-4f0c-8742-fe45bfe83a9e.png)
+
+----------------------- 
 
 ### 마이페이지
 ![9](https://user-images.githubusercontent.com/85046063/199395468-448cf1e8-40e8-4ce1-a017-7589bfe99a62.png)
